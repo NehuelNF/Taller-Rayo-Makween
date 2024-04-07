@@ -1,0 +1,53 @@
+.navbarM{
+    background-color: red;
+    padding-left: 200px;
+    height: 90px;
+    align-items: center;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    color:yellow;
+    text-decoration: none;
+}
+
+.logo a:hover{
+    color:yellow;
+}
+
+
+.form-control{
+    margin-left: 300px;
+}
+
+.nav li{
+    display: inline-block;
+    padding: 15px;
+}
+
+.nav a{
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.nav li:hover{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.nav li a:hover{
+    color: yellow;
+}
+
+.carousel-item{
+    width: auto;
+    height: 600px;
+}
+
+
