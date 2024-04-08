@@ -1,11 +1,10 @@
+/*Inicio*/
 .navbarM{
     background-color: red;
-    padding-left: 200px;
+    padding-left: 100px;
     height: 90px;
     align-items: center;
-
     display: flex;
-    justify-content: space-between;
 }
 
 .logo{
@@ -17,14 +16,13 @@
     color:yellow;
 }
 
-
 .form-control{
-    margin-left: 300px;
+    margin-left: 400px;
+    display: auto;
 }
 
 .nav li{
     display: inline-block;
-    padding: 15px;
 }
 
 .nav a{
@@ -50,4 +48,52 @@
     height: 600px;
 }
 
+.custom-popover{
+    color: brown;
+}
 
+.custom-popover{
+    background-color: yellow;
+}
+
+.texts{
+    line-height: 4.0;
+    margin-left: 380px;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card{
+    width: 13rem;
+}
+
+.card-group{
+    margin-left: 400px;
+    margin-right: 500px;
+}
+
+.card a{
+    text-decoration: none;
+    color: black;
+}
+
+/*Solicitud*/
+#soli{
+    margin-top: 50px;
+    margin-left: 580px;
+   
+}
+
+#p{
+    line-height: 4.0;
+    margin-left: 500px;
+}
+#control{
+    margin-bottom: 30px;
+    margin-left: 50px;
+}
+
+#btnn{
+    margin-top: 40px;
+    margin-left: 900px;
+}
