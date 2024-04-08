@@ -10,21 +10,53 @@
 </head>
 <body>
     <!-- Parte superior -->
-    <div class="navbarM">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="logo" href="paginaPrincipal.html">
-                    <img src="https://seeklogo.com/images/P/Pixar_Cars_-_Rusteze-logo-CD235902CE-seeklogo.com.png" alt="logo" width="65px" height="50px">
-                    Taller Mecanico Makween
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-    <!-- Menu visible -->
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="nav">
+    <div class="container-fluid">
+        <div class="navbarM">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="logo" href="paginaPrincipal.html">
+                        <img src="https://seeklogo.com/images/P/Pixar_Cars_-_Rusteze-logo-CD235902CE-seeklogo.com.png" alt="logo" width="65px" height="50px">
+                        Taller Mecanico Makween
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+        <!-- Menu visible -->
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="paginaPrincipal.html">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Catálogo</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Solicitud.html">Solicitud</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Compra</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex me-3" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                            <button class="btn btn-outline-warning" type="submit"> Buscar </button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+            <!-- Menu oculto -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> Menu </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="paginaPrincipal.html">Servicios</a>
+                            <a class="nav-link" href="paginaPrincipal.html"> Inicio </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"> Servicios </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Catálogo</a>
@@ -33,70 +65,39 @@
                             <a class="nav-link" href="Solicitud.html">Solicitud</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Compra</a>
                         </li>
                     </ul>
-                    <form class="d-flex me-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                        <button class="btn btn-outline-warning" type="submit"> Buscar </button>
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                 </div>
             </div>
-        </nav>
-        <!-- Menu oculto -->
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> Menu </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <ul class="navbar-nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link" href="paginaPrincipal.html"> Inicio </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"> Servicios </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Catálogo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Solicitud.html">Solicitud</a>
-                    </li>
-                    <li class="nav-item">
-                    </li>
-                </ul>
-                <form class="d-flex mt-3" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
         </div>
-    </div>
-    <div class="formulario">
-        <h2 id="soli">Ingrese su Solicitud</h2>
-        <p id="p">Ingrese sus datos a continuacion, Nos pondremos en contacto.</p>
-        <form class="row g-3" id="control">
-            <div class="col-2">
-            <input type="text" class="form-control" id="nombre" placeholder="Nombre">
-            </div>
-            <div class="col-2">
-                <input type="text" class="form-control" id="apellido" placeholder="Apellido">
-            </div>
-            <div class="col-1">
-            <input type="text" class="form-control" id="rut" placeholder="99.999.999-1">
-            </div>
-        </form>
-        <form class="row">
-            <div class="col-2" id="nombre">
-                <input type="text" class="form-control" id="inputEmail4" placeholder="">
+        <div class="formulario">
+            <h2 id="soli">Ingrese su Solicitud</h2>
+            <p id="p">Ingrese sus datos a continuacion, Nos pondremos en contacto.</p>
+            <form class="row g-3" id="control">
+                <div class="col-2">
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre">
                 </div>
-                <div class="col-12">
-                    <button type="submit" class="btn btn-primary" id="btnn">Sign in</button>
+                <div class="col-2">
+                    <input type="text" class="form-control" id="apellido" placeholder="Apellido">
+                </div>
+                <div class="col-1">
+                <input type="text" class="form-control" id="rut" placeholder="99.999.999-1">
+                </div>
+            </form>
+            <form class="row">
+                <div class="col-2" id="nombre">
+                    <input type="text" class="form-control" id="inputEmail4" placeholder="">
                     </div>
-        </form>
-    </div>
-
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary" id="btnn">Sign in</button>
+                        </div>
+            </form>
+        </div>
+    </div>    
 
 
 
