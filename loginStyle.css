@@ -9,7 +9,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(imagenes/Fondo.jpeg) no-repeat;
+    background: url(imagenes/Fondo3.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -18,7 +18,7 @@ body{
 .fondo{
     width: 430px;
     background: transparent;
-    color: #040d12;
+    color: #fff;
     backdrop-filter: blur(10px);
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     border-radius: 8px;
@@ -51,7 +51,7 @@ body{
 }
 
 .contenedor input::placeholder{
-    color: #040d12;
+    color: #fff;
 }
 
 .fondo .recordar{
@@ -67,7 +67,7 @@ body{
 }
 
 .recordar a{
-    color: #040d12;
+    color: #fff;
     text-decoration: none;
 }
 
