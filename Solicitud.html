@@ -10,75 +10,74 @@
     <link rel="stylesheet" href="solicitudStyle.css">
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="navbarM">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
-                    <a class="logo" href="paginaPrincipal.html">
-                        <img src="https://seeklogo.com/images/P/Pixar_Cars_-_Rusteze-logo-CD235902CE-seeklogo.com.png" alt="logo" width="65px" height="50px">
-                        Taller Mecanico Makween
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-        <!-- Menu visible -->
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="paginaPrincipal.html">Servicios</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Catálogo</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="Solicitud.html">Solicitud</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Compra</a>
-                            </li>
-                        </ul>
-                        <form class="d-flex me-3" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                            <button class="btn btn-outline-warning" type="submit"> Buscar </button>
-                        </form>
-                    </div>
-                </div>
-            </nav>
-            <!-- Menu oculto -->
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> Menu </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav flex-column">
+    <div class="navbarM">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="logo" href="paginaPrincipal.html">
+                    <img src="https://seeklogo.com/images/P/Pixar_Cars_-_Rusteze-logo-CD235902CE-seeklogo.com.png" alt="logo" width="65px" height="50px">
+                    Taller Mecanico Makween
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    <!-- Menu visible -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="paginaPrincipal.html"> Inicio </a>
+                            <a class="nav-link" href="paginaPrincipal.html">Servicios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"> Servicios </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Catálogo</a>
+                            <a class="nav-link" href="Catalogo.html">Catálogo</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="Solicitud.html">Solicitud</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="#">Compra</a>
                         </li>
                     </ul>
-                    <form class="d-flex mt-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    <form class="d-flex me-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                        <button class="btn btn-outline-warning" type="submit"> Buscar </button>
+                    </form>
+
+                    <form>
+                        <a href="Registrar.html" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-car-front-fill"> Registrar</i></a>
                     </form>
                 </div>
             </div>
+        </nav>
+
+
+        <!-- Menu oculto -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> Menu </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="paginaPrincipal.html"> Inicio </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> Servicios </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Catalogo.html">Catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Solicitud.html">Solicitud</a>
+                    </li>
+                </ul>
+                <form class="d-flex mt-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+
+            </div>
         </div>
-
-
-
-
-
+    </div>
 
     <!-- SOLICITUD -->
     <section class="form-register">
@@ -103,5 +102,20 @@
             <input class="botons" type="submit" value="Enviar Solicitud">
         </form>       
     </section>
+
+
+    <!-- FOOTER -->
+    <footer class="text-light mt-5" style="background-color: red;">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 Todos los derechos reservados | Taller Rayo Makween</p>
+                </div>
+                <div class="col-md-6 text-right">
+                    <p>Contacto: tallerrayomakween@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </
 </body>
 </html>
