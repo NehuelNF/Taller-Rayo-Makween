@@ -43,17 +43,25 @@
     color: yellow;
 }
 
+.btnn{
+    background-color: red;
+    color: white;
+    border: none;
+    margin-right: 20px;
+}
+
+.btnn:hover{
+    color: yellow;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
 .carousel-item{
     width: auto;
     height: 600px;
-}
-
-.custom-popover{
-    color: brown;
-}
-
-.custom-popover{
-    background-color: yellow;
 }
 
 .texts{
@@ -77,3 +85,16 @@
     color: black;
 }
 
+/*Menu oculto*/
+.offcanvas-body a{
+    color: black;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.offcanvas-body a:hover{
+    color: yellow;
+}
+ .offcanvas-body form{
+    margin-top: 90px;
+ }

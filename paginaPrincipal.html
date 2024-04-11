@@ -34,27 +34,23 @@
                         <li class="nav-item">
                             <a class="nav-link" href="Solicitud.html">Solicitud</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Compra</a>
-                        </li>
                     </ul>
                     <form class="d-flex me-3" role="search">
                         <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
                         <button class="btn btn-outline-warning" type="submit"> Buscar </button>
                     </form>
-
+                    <button type="button" class="btnn" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?"
+                    aria-describedby="popover255457">Carrito</button>
                     <form>
                         <a href="Registrar.html" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-car-front-fill"> Registrar</i></a>
                     </form>
                 </div>
             </div>
         </nav>
-
-
         <!-- Menu oculto -->
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> Menu </h5>
+                <h3 class="offcanvas-title" id="offcanvasNavbarLabel"> Menu </h3>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
@@ -63,24 +59,23 @@
                         <a class="nav-link" href="paginaPrincipal.html"> Inicio </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> Servicios </a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="Catalogo.html">Catálogo</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Solicitud.html">Solicitud</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav nav-link" data-bs-content="aria-disabled" href="paginaPrincipal.html"> Carrito</a>
+                    </li>
                 </ul>
-                <form class="d-flex mt-3" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                <form>
+                    <a href="Login.html" role="button" aria-disabled="true" class="bi bi-car-front-fill">  Iniciar sesion</a>
+                    <span>|</span>
+                    <a href="Registrar.html" role="button">Registrar</a>
                 </form>
-
             </div>
         </div>
     </div>
-
     <!-- Carousel -->
     <div class="carousel slide" id="carouselExampleAutoplaying" data-bs-ride="carousel">
         <div class="carousel-indicators">
