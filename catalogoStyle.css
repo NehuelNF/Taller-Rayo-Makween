@@ -5,11 +5,6 @@
     overflow: hidden;
 }
 
-.container-fluid{
-    width: 100%;
-    display: flex;
-    max-width: 1100px;
-}
 
 .col a{
     text-decoration: none;
