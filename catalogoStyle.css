@@ -1,8 +1,13 @@
 .card{
-    margin: 20px;
-    width: 100%;
+    width: 20rem;
     border-radius: 6%;
     overflow: hidden;
+    -webkit-border-radius: 6%;
+    -moz-border-radius: 6%;
+    -ms-border-radius: 6%;
+    -o-border-radius: 6%;
+    margin: 30px;
+
 }
 
 
