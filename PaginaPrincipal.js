@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var popover = new bootstrap.Popover(popoverButton, {
         title: 'Carrito de compra',
-        content: "! El carrito no esta disponible de momento ¡",
+        content: "¡ El carrito no esta disponible de momento !",
         trigger: "hover",
         container: 'body'
     });
