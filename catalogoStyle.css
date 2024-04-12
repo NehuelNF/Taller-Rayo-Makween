@@ -81,6 +81,20 @@
 }
 
 #nave{
-    margin-left: 700px;
     margin-top: 50px;
+}
+
+@media screen and (max-width:1497px) {
+    #v-pills-tab {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .npill{
+        margin-left: 3px;
+        margin-top: -6px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 530;
+    }
 }
