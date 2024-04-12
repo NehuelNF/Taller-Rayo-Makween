@@ -3,6 +3,7 @@
     color: red;
     margin-right: 150px;
     margin-top: 150px;
+    
     text-decoration: none;
     font-size: 22px;
     font-weight: 700;
@@ -80,6 +81,6 @@
 }
 
 #nave{
-    margin-left: 800px;
+    margin-left: 700px;
     margin-top: 50px;
 }

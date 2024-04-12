@@ -1,14 +1,4 @@
 /*Inicio*/
-
-.fondinho{
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: url(imagenes/aaaa.jpeg) no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
 .navbarM{
     background-color: red;
     padding-left: 100px;
@@ -81,7 +71,6 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-
 /*Menu oculto*/
 .offcanvas-body a{
     color: black;
@@ -135,3 +124,14 @@
     text-decoration: none;
     color: black;
 }
+
+/* Carousel*/
+.carousel-item h5{
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.carousel-item p{
+    margin-bottom: 50px;
+}
+
