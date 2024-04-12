@@ -15,18 +15,12 @@
     -o-transform: scale(1.3);
 }
 
-.btns a{
-    text-decoration: none;
-    color: red;
-}
-
 #bt{
     text-decoration: none;
 }
 
 .btns a:hover{
     color: yellow;
-    text-decoration: none;
 }
 
 /* Carta*/
