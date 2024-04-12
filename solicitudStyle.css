@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+.fondinho{
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(imagenes/aaaa.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
 .form-register{
     width: 400px;
     background: red;
@@ -20,7 +30,7 @@
     margin-bottom: 20px;
 }
 
-.controls {
+.controls{
     width: 100%;
     background: white;
     padding: 10px;
