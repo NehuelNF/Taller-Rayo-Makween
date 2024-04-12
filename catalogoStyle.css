@@ -1,7 +1,7 @@
 /*Menu*/
 #v-pills-tab{
     color: red;
-    margin-left: 25px;
+    margin-right: 150px;
     margin-top: 150px;
     text-decoration: none;
     font-size: 22px;
@@ -20,7 +20,8 @@
 .npill{
     display: flex;
     color: red;
-    margin: 10px;
+    margin: 20px;
+    margin-left: 50px;
     margin-top: 20px;
     text-decoration: none;
     font-size: 22px;
