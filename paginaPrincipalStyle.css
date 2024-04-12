@@ -119,6 +119,10 @@
     width: 13rem;
 }
 
+.carda h3{
+    text-align: center;
+}
+
 .carda a img{
     max-width: 70%;
     flex: 0 0 20%;
