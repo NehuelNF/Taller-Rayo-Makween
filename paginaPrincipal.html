@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Taller Makween </title>
     <link rel="icon" type="image/png" sizes="32x32" href="https://seeklogo.com/images/P/Pixar_Cars_-_Rusteze-logo-CD235902CE-seeklogo.com.png"/>
+    <!-- Css -->
     <link rel="stylesheet" href="paginaPrincipalStyle.css">
-    <!--bootstrap-->
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script src="PaginaPrincipal.js"></script>
 </head>
 <body>
     <!-- Parte superior -->
@@ -35,22 +35,27 @@
                         <li class="nav-item">
                             <a class="nav-link" href="Solicitud.html">Solicitud</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Compra</a>
+                        </li>
                     </ul>
                     <form class="d-flex me-3" role="search">
                         <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
                         <button class="btn btn-outline-warning" type="submit"> Buscar </button>
                     </form>
-                    <button type="button" class="btnn"  > Carrito </button>
+
                     <form>
                         <a href="Registrar.html" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-car-front-fill"> Registrar</i></a>
                     </form>
                 </div>
             </div>
         </nav>
+
+
         <!-- Menu oculto -->
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
-                <h3 class="offcanvas-title" id="offcanvasNavbarLabel"> Menu </h3>
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> Menu </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
@@ -59,23 +64,24 @@
                         <a class="nav-link" href="paginaPrincipal.html"> Inicio </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#"> Servicios </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="Catalogo.html">Catálogo</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Solicitud.html">Solicitud</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav nav-link" data-bs-content="aria-disabled" href="paginaPrincipal.html"> Carrito</a>
-                    </li>
                 </ul>
-                <form>
-                    <a href="Login.html" role="button" aria-disabled="true" class="bi bi-car-front-fill">  Iniciar sesion</a>
-                    <span>|</span>
-                    <a href="Registrar.html" role="button">Registrar</a>
+                <form class="d-flex mt-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
+
             </div>
         </div>
     </div>
+
     <!-- Carousel -->
     <div class="carousel slide" id="carouselExampleAutoplaying" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -84,11 +90,12 @@
             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
+            
             <div class="carousel-item active">
                 <img src="https://www.bmw.cl/content/dam/bmw/marketLATAM/master/LandingPage/bmw-m4-new-01.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Somos los numeros unos</h5>
-                    <p>Somos el mejor taller de la zona, con mas de 25 años de trayectoria.</p>
+                    <p>Somos el mejor taller, con mas de 25 años de trayectoria.</p>
                 </div>
             </div>
             <div class="carousel-item">
@@ -167,7 +174,7 @@
         </div>
     </footer>
     <!--bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
+
