@@ -59,10 +59,6 @@
     -o-transform: scale(1.1);
 }
 
-.carousel-item{
-    width: auto;
-    height: 600px;
-}
 
 .texts{
     line-height: 4.0;
@@ -139,3 +135,6 @@
     margin-bottom: 50px;
 }
 
+.carousel-item{
+    height: 600px;
+}
