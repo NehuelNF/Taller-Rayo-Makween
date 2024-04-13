@@ -51,7 +51,7 @@ h2 {
   color: rgb(255, 255, 255);
   padding: 48px
 }
-.btn {
+.btonn {
   display: inline-block;
   background: white;
   margin-right: 4px;
@@ -59,13 +59,13 @@ h2 {
   border-radius: 5px;
   margin-top: 18px;
 }
-a.btn{
+a.btonn{
    text-decoration: none;
 }
-a.btn:first-of-type {
+a.btonn:first-of-type {
    background: #eeff00;
    color: rgb(0, 0, 0);
 }
-a.btn:hover{
+a.btonn:hover{
    opacity: 0.8;
 }
