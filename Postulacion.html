@@ -6,12 +6,11 @@
     <title> Taller Makween </title>
     <link rel="icon" type="image/png" sizes="32x32" href="https://seeklogo.com/images/P/Pixar_Cars_-_Rusteze-logo-CD235902CE-seeklogo.com.png"/>
     <!-- Css -->
-    <link rel="stylesheet" href="paginaPrincipalStyle.css">
+    <link rel="stylesheet" href="PostulacionStyle.css">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script src="PaginaPrincipal.js"></script>
-    <script src="PostulacionJS.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 </head>
 <body>
     <!-- Parte superior -->
@@ -19,8 +18,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="logo" href="paginaPrincipal.html">
-                    <img src="https://seeklogo.com/images/P/Pixar_Cars_-_Rusteze-logo-CD235902CE-seeklogo.com.png" alt="logo" width="65px" height="50px">
-                    Taller Mecanico Makween
+                    <img src="imagenes/logo.png" alt="logo" width="150px" height="50px">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -78,19 +76,111 @@
             </div>
         </div>
     </div>
-
-    <!--Postulacion-->
-
-    <form action="">           
-    <div class="mb-3">
-        <label>Inserte archivo</label>
-        <input type="file" class="form-control" aria-label="file example" required>
-        <div class="invalid-feedback">Example invalid form file feedback</div>
+    <!--Formulario simple-->
+    <div class="container-fluid" id="formu">
+        <form>
+            <div class="nombre">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre">
+            </div>
+            <div id="error1"></div>
+            <div class="rut">
+                <label for="rut">Rut</label>
+                <input type="text" id="rut" placeholder="11.111.111-k">
+            </div>
+            <div id="error2"></div>
+            <div class="apaterno">
+                <label for="apaterno">Apellido paterno</label>
+                <input type="text" id="apaterno">
+            </div>
+            <div id="error3"></div>
+            <div>
+                <label for="amaterno">Apellido materno</label>
+                <input type="text" id="amaterno">
+            </div>
+            <div id="error4"></div>
+            <div>
+                <label for="fecha"> Fecha de nacimiento</label>
+                <input type="date" id="fecha">
+            </div>
+            <div>
+                <label for="edad"> Ingrese edad</label>
+                <input type="number" id="edad" placeholder="18 - 38 años">
+            </div>
+            <div id="error5"></div>
+            <div>
+                <label for="genero"> Género </label>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="genOpt" id="gmas" value="genero1" required>
+                    <label class="form-check-label" for="gmas">Masculino</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="genOpt" id="gfem" value="genero2">
+                    <label class="form-check-label" for="gfem">Femenino</label>
+                </div>
+            </div>
+            <div>
+                <label for="email"> Email</label>
+                <input type="text" id="email">
+            </div>
+            <div>
+                <label for="celular"> Numero celular</label>
+                <input type="number" id="celular" placeholder="+569 ">
+            </div>
+            <div id="error6"></div>
+            <div>
+                <label for="profesion"> Ingrese su profesion</label>
+                <input type="text" id="profesion">
+            </div>
+            <div>
+                <label for="motivacion"> Motivacion</label>
+                <input type="text" id="motivacion">
+            </div>
+            <input type="submit" onclick='return formulario()' value="enviar" data-bs-toggle="modal" data-bs-target="#mandarfor" >
+            <div class="modal fade" id="mandarfor" aria-hidden="true" aria-labelledby="mandarforLabel" tabindex="-1" style="display: none;">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="mandarforLabel">Mandar Postulacion</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="message-text" class="col-form-label"> Estas seguro de que quieres enviar la Postulacion</label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+                            <button type="button" class="btn btn-primary" onclick='return formulario()' data-bs-target="#mandarfor2" data-bs-toggle="modal">Enviar Postulacion</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="mandarfor2" aria-hidden="true" aria-labelledby="mandarforLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="mandarfor2">Enviado</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Se ha enviado su Solicitud correctamente
+                        </div>
+                        <div class="modal-footer">
+                            <button id="btn1" type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a href="Postulacion.html">Volver</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
     </div>
-    </form>
 
+    <!--JAVASCRIPT-->
+    <script src="PostulacionJS.js"></script>
     <!-- FOOTER -->
-    <footer class="text-light mt-5" style="background-color: red;">
+    <footer class="text-light " style="background-color: red;">
         <div class="container py-4">
             <div class="row">
                 <div class="col-md-6">
@@ -102,6 +192,7 @@
             </div>
         </div>
     </footer>
+    <script src="PaginaPrincipal.js"></script>
 <!--bootstrap-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
