@@ -14,72 +14,8 @@
 </head>
 <body>
     <!-- Parte superior -->
-    <div class="navbarM">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="logo" href="paginaPrincipal.html">
-                    <img src="imagenes/logo2.png" alt="logo" width="150px" height="50px">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-    <!-- Menu visible -->
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="paginaPrincipal.html">Servicios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Catalogo.html">Catálogo</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Solicitud.html">Solicitud</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex me-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                        <button class="btn btn-outline-warning" type="submit"> Buscar </button>
-                    </form>
-                    <button type="button" class="btnn"  > Carrito </button>
-                    <form>
-                        <a href="Registrar.html" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-car-front-fill"> Registrar</i></a>
-                    </form>
-                </div>
-            </div>
-        </nav>
-        <!-- Menu oculto -->
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-                <h3 class="offcanvas-title" id="offcanvasNavbarLabel"> Menu </h3>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <ul class="navbar-nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link" href="paginaPrincipal.html"> Inicio </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Catalogo.html">Catálogo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Solicitud.html">Solicitud</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Postulacion.html">Postulacion</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav nav-link" data-bs-content="aria-disabled" href="paginaPrincipal.html"> Carrito</a>
-                    </li>
-                </ul>
-                <form>
-                    <a href="Login.html" role="button" aria-disabled="true" class="bi bi-car-front-fill">  Iniciar sesion</a>
-                    <span>|</span>
-                    <a href="Registrar.html" role="button">Registrar</a>
-                </form>
-            </div>
-        </div>
-    </div>
-
+    <header>
+    </header>
     <!-- Carousel -->
     <center>
         <div class="carousel slide" id="carouselExampleAutoplaying" data-bs-ride="carousel">
@@ -211,29 +147,6 @@
             </a>
         </div>
     </div>
-
-    <!-- Carrucel 2
-    <div class="texttitle">
-        <h3>¡Comentarios de nuestro taller!</h3>
-    </div>
-    <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="imagenes/1.png" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="imagenes/2.png" class="d-block w-100" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-    </div>-->
 
     <!--Comentarios-->
     <div class="texttitle">
@@ -461,33 +374,12 @@
         </div>
     </div>
 
-        <!-- footer-->
-        <footer class="fo-pagina" >
-                <div class="part-1">
-                    <div class="box">
-                        <figure>
-                            <a href="#">
-                                <img src="imagenes/logo2.png" alt="Logo de RM"  >
-                            </a>
-                        </figure>
-                    </div>
-                    <div class="box">
-                        <h5>Ofertas Exclusivas en tu correo</h5>
-                        <input type="text" placeholder="Ingrese su correo">
-                        <input type="button" value="Suscribete">
-                    </div>
-                    <div class="box">
-                        <h2>Contactanos</h2>
-                        <p><i class="bi bi-envelope-at-fill"> tallerrayomakween@gmail.com</i></p>
-                        <p><i class="bi bi-telephone-fill"> (+569)7835 6134</i></p>
-                    </div>
-                </div>
-                <div class="part-2">
-                    <p>&copy; 2024 <b>Taller Rayo Makween</b> - Todos los Derechos Reservados.</p>
-                </div>
-        </footer>
+    <!-- footer-->
+    <footer class="fo-pagina" >
+    </footer>
+    <!--Header and Footer JS-->
+    <script src="HeadAndFoot.js"></script>
     <!--bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
-
