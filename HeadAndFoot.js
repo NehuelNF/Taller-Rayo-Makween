@@ -80,7 +80,7 @@ footer.innerHTML=`
                         <input type="text" placeholder="Ingrese su correo">
                         <input type="button" value="Suscribete">
                     </div>
-                    <div class="box">
+                    <div class="box" id="cont">
                         <h2>Contactanos</h2>
                         <p><i class="bi bi-envelope-at-fill"> tallerrayomakween@gmail.com</i></p>
                         <p><i class="bi bi-telephone-fill"> (+569)7835 6134</i></p>
