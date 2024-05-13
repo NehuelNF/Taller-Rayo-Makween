@@ -275,3 +275,40 @@
     text-align: center;
     color: #fff;
 }
+
+@media screen and (max-width: 945px) {
+    .fo-pagina .part-1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fo-pagina #cont{
+        margin-left: 200px;
+    }
+    .fo-pagina .part-1 .box h2 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 764px) {
+
+    .fo-pagina #cont{
+        margin-left: 100px;
+    }
+    .fo-pagina .part-1 .box h2 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 486px) {
+    .fo-pagina .part-1 {
+        margin-left: 50px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .fo-pagina #cont{
+        margin-left: 10px;
+    }
+    .fo-pagina .part-1 .box h2 {
+        font-size: 20px;
+    }
+}

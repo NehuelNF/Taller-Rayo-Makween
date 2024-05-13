@@ -1,0 +1,55 @@
+#total{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.form-register{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    background: red;
+    padding: 30px;
+    margin: auto;
+    border-radius: 10px;
+    font-family: 'Calibi';
+    color: white;
+}
+
+.form-register h4{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.dato{
+    width: 100%;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    border: 1px solid black;
+    font-family: 'Calibi';
+    font-size: 18px;
+}
+
+.form-register .btn-pay {
+    width: 100%;
+    background: yellow;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    color: black;
+    font-size: 19px;
+}
+
+.fondo{
+    background: url(imagenes/fondo_carro.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
