@@ -1,7 +1,6 @@
 //Validar que los campos no esten vacios (sin informacion)
 
 function validar(){
-    
     //Obtengo los datos ingresados en los input
 
     var nombre = document.getElementById("nombre").value;
@@ -28,7 +27,6 @@ function validar(){
         alert('Ingrese una descripion')
     }
 
-    
 }
 
 //Validar que inputs solo sean numeros

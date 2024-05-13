@@ -51,9 +51,6 @@ header.innerHTML=`
                             <a class="nav-link" href="Solicitud.html">Solicitud</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Postulacion.html">Postulacion</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav nav-link" data-bs-content="aria-disabled" href="paginaPrincipal.html"> Carrito</a>
                         </li>
                     </ul>
