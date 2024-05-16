@@ -18,23 +18,23 @@
             <h1>Registrar</h1>
 
             <div class="contenedor">
-                <input type="text" placeholder="Nombre Usuario" required>
+                <input type="text" name="usuario" id="usuario" placeholder="Nombre Usuario" required>
             </div>
 
             <div class="contenedor">
-                <input type="email" placeholder="Correo Electronico" required>
+                <input type="email" name="email" id="email" placeholder="Correo Electronico" required>
             </div>
 
             <div class="contenedor">
-                <input type="password" placeholder="Contraseña" required>
+                <input type="password" name="pass" id="pass" placeholder="Contraseña" required>
             </div>
 
             <div class="contenedor">
-                <input type="password" placeholder="Confirmar Contraseña" required> 
+                <input type="password" name="conf_pass" id="conf_pass" placeholder="Confirmar Contraseña" required> 
             </div>
 
 
-            <button type="submit" class="btn1">Registrar</button>
+            <button onclick="validarResgistro()" type="submit" class="btn1">Registrar</button>
 
             <div class="registro-enlaces">
                 <p>¿Ya tienes una cuenta? <a href="Login.html">Iniciar sesión</a></p>
@@ -46,5 +46,7 @@
         </form>
     </div>
 
+    <!-- Javascript -->
+    <script src="registrar.js"></script>
 </body>
 </html>

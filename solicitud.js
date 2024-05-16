@@ -1,4 +1,4 @@
-//Validar que los campos no esten vacios (sin informacion)
+//Validar que los campos no esten vacios 
 
 function validar(){
     //Obtengo los datos ingresados en los input
@@ -29,5 +29,5 @@ function validar(){
 
 }
 
-//Validar que inputs solo sean numeros
+
 
