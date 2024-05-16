@@ -30,4 +30,14 @@ function validar(){
 }
 
 
+//Validar que el campo solo sea numerico
+function validarNumericos(event){
+
+    if (event.charCode >= 48 && event.charCode <=57){
+        return true;    
+    }
+    return false;
+}
+
+
 
