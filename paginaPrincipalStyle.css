@@ -357,3 +357,20 @@
         width: 70%;
     }
 }
+
+/* Estilo para cuando el taller está abierto */
+#estadoTaller.abierto {
+    color: white; 
+    text-align: center;
+    background-color: green;
+
+}
+
+
+
+/* Estilo para cuando el taller está cerrado */
+#estadoTaller.cerrado {
+    color: white; 
+    text-align: center;
+    background-color: red;
+}
