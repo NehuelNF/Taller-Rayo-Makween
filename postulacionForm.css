@@ -4,7 +4,7 @@
 body {
 	font-family: 'Roboto', sans-serif;
 }
-.container-fluid {
+#postulacioncss {
     max-width: 800px;
     width: 90%;
     margin: auto;
