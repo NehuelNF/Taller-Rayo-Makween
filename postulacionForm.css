@@ -1,0 +1,155 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Roboto', sans-serif;
+}
+.container-fluid {
+    max-width: 800px;
+    width: 90%;
+    margin: auto;
+    padding: 40px;
+}
+
+.postulacion {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.postulacion_label {
+    font-weight: 700;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.postulacion-input {
+    position: relative;
+}
+
+.postulacion_input {
+    width: 100%;
+    background: #fff;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 40px 0 10px;
+    transition: .3s ease all;
+}
+
+.postulacion_input:focus {
+    border: 3px solid #0075FF;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+
+.postulacion_input-error {
+    font-size: 12px;
+    margin-bottom: 0;
+    display: none;
+}
+
+.postulacion_input-error-activo {
+    display: block;
+}
+
+.postulacion_validacion {
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
+}
+
+.postulacion_grupo-terminos,
+.postulacion_mensaje,
+.postulacion_grupo-btn-enviar {
+    grid-column: span 2;
+}
+
+.postulacion_mensaje {
+    height: 45px;
+    line-height: 45px;
+    background: #F66060;
+    padding: 0 15px;
+    border-radius: 3px;
+    display: none;
+}
+
+.postulacion_mensaje-activo {
+    display: block;
+}
+
+.postulacion_mensaje p {
+    margin: 0;
+}
+
+.postulacion_grupo-btn-enviar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.postulacion_btn {
+    height: 45px;
+    line-height: 45px;
+    width: 100%;
+    background: #000;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .1s ease all;
+}
+
+.postulacion_btn:hover {
+    box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+}
+
+.postulacion_mensaje-exito {
+    font-size: 14px;
+    color: #119200;
+    display: none;
+}
+
+.postulacion_mensaje-exito-activo {
+    display: block;
+}
+
+/*Validacion*/
+.postulacion_grupo-correcto .postulacion_validacion {
+    color: #1ed12d;
+    opacity: 1;
+}
+
+.postulacion_grupo-incorrecto .postulacion_label {
+    color: #bb2929;
+}
+
+.postulacion_grupo-incorrecto .postulacion_validacion {
+    color: #bb2929;
+    opacity: 1;
+}
+
+.postulacion_grupo-incorrecto .postulacion_input {
+    border: 3px solid #bb2929;
+}
+
+@media screen and (max-width: 800px) {
+    .postulacion {
+        grid-template-columns: 1fr;
+    }
+
+    .postulacion_grupo-terminos,
+    .postulacion_mensaje,
+    .postulacion_grupo-btn-enviar {
+        grid-column: 1;
+    }
+
+    .postulacion_btn {
+        width: 100%;
+    }
+}
