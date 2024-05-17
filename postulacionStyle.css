@@ -81,23 +81,12 @@
     margin-top: 90px;
 }
 
-/*contenido*/
-#nosotros{
-    display: flex;
-    justify-content: center;
-}
 
 #trabajadores{
     display: flex;
     justify-content: center;
 }
 
-#info{
-    display: flex;
-    text-align: center;
-    margin-left: 20px;
-    margin-right: 20px;
-}
 
 /* Carta*/
 .container-card{
@@ -107,9 +96,10 @@
 	margin: auto;
     flex-wrap: wrap;
     margin-top: 20px;
+    justify-content: center;
 }
 .card{
-	max-width: 100%;
+	max-width: 20%;
 	width: 100%;
 	margin: 20px;
 	border-radius: 6px;
@@ -170,10 +160,18 @@
     color: #fff;
 }
 
-/*mapa*/
-.map{
-    margin: 5em auto;
-    margin-left: 600px;
 
+#text-map {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+  }
+  
+#info {
+    width: 50%;
 }
 
+.map {
+    width: 50%;
+}
+  
