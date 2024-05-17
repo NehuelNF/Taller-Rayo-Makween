@@ -84,7 +84,7 @@
 /*contenido*/
 #nosotros{
     display: flex;
-    justify-content: left;
+    justify-content: center;
 }
 
 #trabajadores{
@@ -94,8 +94,9 @@
 
 #info{
     display: flex;
-    text-align: left;
-    margin-right: 50%;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 /* Carta*/
