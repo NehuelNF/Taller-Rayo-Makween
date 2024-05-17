@@ -27,7 +27,7 @@ header.innerHTML=`
                             <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
                             <button class="btn btn-outline-warning" type="submit"> Buscar </button>
                         </form>
-                        <button type="button" class="btnn"  > Carrito </button>
+                        <button type="button" class="btnn" href="Carro.html"> Carrito </button>
                         <form>
                             <a href="Registrar.html" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-car-front-fill"> Registrar</i></a>
                         </form>
@@ -51,7 +51,7 @@ header.innerHTML=`
                             <a class="nav-link" href="Solicitud.html">Solicitud</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav nav-link" data-bs-content="aria-disabled" href="paginaPrincipal.html"> Carrito</a>
+                            <a class="nav nav-link" data-bs-content="aria-disabled" href="Carro.html"> Carrito</a>
                         </li>
                     </ul>
                     <form>
