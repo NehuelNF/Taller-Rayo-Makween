@@ -4,6 +4,15 @@
 body {
 	font-family: 'Roboto', sans-serif;
 }
+
+#trabaja{
+    background-color: red;
+    color: white;
+    box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+    margin-right: 20px;
+    text-align: center;
+}
+
 #postulacioncss {
     max-width: 800px;
     width: 90%;
