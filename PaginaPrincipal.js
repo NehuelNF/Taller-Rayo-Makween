@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //API DE HORA SANTIAGO
 $(function() {
-    // Función para obtener la hora actual de Santiago
+    
     function obtenerHoraSantiago() {
         // Hacer la solicitud GET a la API de World Time para obtener la hora de Santiago
         $.get("http://worldtimeapi.org/api/timezone/America/Santiago", function(data) {
