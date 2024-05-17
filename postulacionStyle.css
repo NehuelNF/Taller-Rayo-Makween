@@ -160,18 +160,43 @@
     color: #fff;
 }
 
+#nosotros{
+    display: flex;
+    justify-content: center;
+}
+
+#encuentro{
+    display: flex;
+    justify-content: center;
+}
 
 #text-map {
     display: flex;
-    align-items: center;
-    justify-content: space-between; 
-  }
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.informacion{
+    margin-left: 10%;
+}
   
 #info {
-    width: 50%;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
 }
 
 .map {
     width: 50%;
+    flex: 1;
+    margin-right: 10%;
+    margin-bottom: 20px;
+}
+
+.informacion-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
 }
   
