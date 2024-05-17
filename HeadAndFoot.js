@@ -14,9 +14,6 @@ header.innerHTML=`
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="paginaPrincipal.html">Servicios</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="Catalogo.html">Catálogo</a>
                             </li>
                             <li class="nav-item">
