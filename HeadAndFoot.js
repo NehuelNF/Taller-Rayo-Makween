@@ -22,6 +22,9 @@ header.innerHTML=`
                             <li class="nav-item">
                                 <a class="nav-link" href="Solicitud.html">Solicitud</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="postulacion.html">Postulacion</a>
+                            </li>
                         </ul>
                         <form class="d-flex me-3" role="search">
                             <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
@@ -52,6 +55,9 @@ header.innerHTML=`
                         </li>
                         <li class="nav-item">
                             <a class="nav nav-link" data-bs-content="aria-disabled" href="Carro.html"> Carrito</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav nav-link" data-bs-content="aria-disabled" href="postulacion.html"> Postulacion</a>
                         </li>
                     </ul>
                     <form>
