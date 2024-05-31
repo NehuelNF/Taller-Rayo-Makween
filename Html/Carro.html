@@ -44,7 +44,24 @@
 
     <h1 id="total">Total: "Valor"</h1>
     
-
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Corfirmación de compra</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            Por favor confirmar
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary">Confirmar</button>
+            </div>
+        </div>
+        </div>
+    </div>
     <!--Datos de compra-->
     <section class="form-register">
         <form class="">
@@ -78,8 +95,10 @@
             <div>
                 <textarea class="dato" name="indicaciones" id="indicaciones" cols="40" rows="5" placeholder="   Indicaciones o referencias" required></textarea>
             </div>
-                    
-            <button onclick="validarCarro()" class="btn-pay">Enviar Solicitud</button>
+            
+            <div>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="validarCarro()" class="btn-pay">Enviar Solicitud</button>
+            </div>
         </form>       
     </section>
 
