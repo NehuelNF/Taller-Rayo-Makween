@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Taller Makween </title>
+    <link rel="icon" type="image/png" sizes="32x32" href="https://seeklogo.com/images/P/Pixar_Cars_-_Rusteze-logo-CD235902CE-seeklogo.com.png"/>
+    {% load static %}
+    <!-- Css -->
+    <link rel="stylesheet" href="{% static 'css/paginaPrincipalStyle.css' %}">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'bootstrap-5.3.3/css/bootstrap.css' %}">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/PaginaPrincipal.js' %}"></script>
+</head>
+<body>
+    <!-- Parte superior -->
+    <header>
+    </header>
+    <!-- Carousel -->
+    <center>
+        <div class="carousel slide" id="carouselExampleAutoplaying" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{% static 'imagenes/vehiculo1.jpg' %}" class="d-block " alt="...">
+                        <div class="carousel-caption ">
+                            <h5> Bienvenidos al taller Makween </h5>
+                            <p>Encuentra lo mejor para tu auto Qchau</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'imagenes/vehiculo2.jpg' %}" class="d-block" alt="...">
+                        <div class="carousel-caption">
+                            <h5>Nuestros servicios</h5>
+                            <p>Contamos con los mejores productos y servicios de la zona.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'imagenes/vehiculo3.jpg' %}" class="d-block" alt="...">
+                        <div class="carousel-caption  ">
+                            <h5> Somos los N° 1 🏆 </h5>
+                            <p>Somos el mejor taller de la region, con mas de 25 años de trayectoria.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+        </div>
+    </center>
+    <div>
+        <p id="estadoTaller"></p>
+    </div>
+    <!-- Texto Arriba -->
+    <div class="texttitle">
+        <h3>¡Nuestros mejores productos!</h3>
+    </div>
+    
+
+    <!-- Card -->
+    <div class="container-carda">
+        <div class="carda">
+            <a href="../catalogo/A-Bateria1.html">
+                <img src="{% static 'imagenes/batería1.jpg' %}">
+                <div class="cardl">
+                    <h3> Batería </h3>
+                    <ul>
+                        <li>Cca (-18 Grados): 300</li>
+                        <li>Tipo de borne: DELGADO</li>
+                        <li>lado positivo: DERECHO</li>
+                        <li>Amperaje: 35 AMP.</li>
+                        <li>Garantía: 18 meses</li>
+                        <li>Código Fabricante: AG00006252DPS</li>
+                    </ul>
+                </div>
+            </a>
+        </div>
+        <div class="carda">
+            <a href="../catalogo/A-Neumatico3.html">
+                <img src="{% static 'imagenes/nuematico 333.jpg' %}">
+                <div class="cardl">
+                    <h3>  Neumatico </h3>
+                    <ul>
+                        <li>Aro: 16</li>
+                        <li>Ancho: 245</li>
+                        <li>Perfil: 70</li>
+                        <li>Indice de carga: 1090</li>
+                        <li>Codigo Fabricante: 1023445HKI</li>
+                    </ul>
+                </div>
+            </a>
+        </div>
+        <div class="carda">
+            <a href="../catalogo/A-Correa.html">
+                <img src="{% static 'imagenes/correa.jpg' %}">
+                <div class="cardl">
+                    <h3> Correa </h3>
+                    <ul>
+                        <li>Tipo: EN V</li>
+                        <li>Medidas (Mm): 13X975</li>
+                        <li>Unidades por caja: 1</li>
+                        <li>Ancho de caja (cm): 15</li>
+                        <li>Altura de caja (cm): 25</li>
+                        <li>Longitud de caja (cm): 5</li>
+                        <li>Peso bruto de caja (kg): 0.1</li>
+
+                    </ul>
+                </div>
+            </a>
+        </div>
+        <div class="carda">
+            <a href="../catalogo/A-Neumatico1.html">
+                <img src="{% static 'imagenes/neumatico 111.jpg' %}">
+                <div class="cardl">
+                    <h3> Neumaticos </h3>
+                    <ul>
+                        <li>Aro: 14</li>
+                        <li>Ancho: 185</li>
+                        <li>Perfil: 65</li>
+                        <li>Índice de Carga: 515Kg</li>
+                        <li>Código Fabricante: 1010260</li>
+                    </ul>
+                </div>
+            </a>
+        </div>
+        <div class="carda">
+            <a href="../catalogo/A-Bobina1.html">
+                <img src="{% static 'imagenes/bobina1.jpg' %}">
+                <div class="cardl">
+                    <h3> Bobina </h3>
+                    <ul>
+                        <li>Tipo De Bobina: SALIDA MULTIPLE</li>
+                        <li>Cantidad de Pins: 3 PINES</li>
+                        <li>Unidades por caja: 1</li>
+                        <li>País: Chile</li>
+                        <li>Ancho de caja (cm): 12</li>
+                        <li>Altura de caja (cm): 15</li>
+                        <li>Longitud de caja (cm): 11</li>
+                        <li>Peso bruto de caja (kg): 0.5</li>
+                    </ul>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!--Comentarios-->
+    <div class="texttitle">
+        <h3>¡Comentarios de nuestro taller!</h3>
+    </div>
+    <div class="slider">
+        <div class="slide-track">
+            <div class="Comentarios-container">
+                <div class="Comentario-box">
+                    <div class="slide">
+                        <div class="Perfil">
+                            <div class="Perfil-img">
+                                <img src="{% static 'imagenes/01.png' %}"/>
+                            </div>
+                            <div class="usuario">
+                                <strong>Manuel Tabilo</strong>
+                                <span>Manu_tabilo@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="Comentarios">
+                            <i id="rayo">⭐</i>
+                            <i id="rayo">⭐</i>
+                            <i id="rayo">⭐</i>
+                            <i id="rayo">⭐</i>
+                            <i id="rayo">⭐</i>
+                        </div>
+                        <div class="Mensaje">
+                            <p>Estoy absolutamente impresionado con el servicio del taller mecánico.
+                                Mi coche nunca ha funcionado mejor y el personal fue increíblemente amable y profesional.
+                                ¡Definitivamente volveré para futuros servicios!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Comentarios-container">
+                    <div class="Comentario-box">
+                        <div class="slide">
+                            <div class="Perfil">
+                                <div class="Perfil-img">
+                                    <img src="{% static 'imagenes/04.png' %}"/>
+                                </div>
+                                <div class="usuario">
+                                    <strong>Rene Puente</strong>
+                                    <span>LocoRene@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="Comentarios">
+                                <i id="rayo">⭐</i>
+                                <i id="rayo">⭐</i>
+                                <i id="rayo">⭐</i>
+                                <i id="rayo">⭐</i>
+                                <i id="rayo"></i>
+                            </div>
+                            <div class="Mensaje">
+                                <p> ¡Experiencia excepcional en el taller mecánico! Resolvieron los problemas de mi
+                                    vehículo de manera eficiente y a un precio razonable. El equipo fue muy atento y
+                                    explicó todo claramente. ¡Recomiendo este taller a todos los que buscan un servicio
+                                    de calidad!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Comentarios-container">
+                    <div class="Comentario-box">
+                        <div class="slide">
+                            <div class="Perfil">
+                                <div class="Perfil-img">
+                                    <img src="{% static 'imagenes/02.png' %}"/>
+                                </div>
+                                <div class="usuario">
+                                    <strong>Valentina Kvith</strong>
+                                    <span>Valevith@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="Comentarios">
+                                <i id="rayo">⭐</i>
+                                <i id="rayo">⭐</i>
+                                <i id="rayo">⭐</i>
+                                <i id="rayo">⭐</i>
+                                <i id="rayo"></i>
+                            </div>
+                            <div class="Mensaje">
+                                <p> ¡Servicio de primera clase en el taller mecánico! No solo arreglaron mi coche a tiempo,
+                                    sino que también me mantuvieron informado durante todo el proceso.
+                                    El personal fue extremadamente servicial y amable.
+                                    ¡Sin duda, el mejor servicio al cliente que he experimentado!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Comentarios-container">
+                    <div class="Comentario-box">
+                        <div class="slide">
+                            <div class="Perfil">
+                                <div class="Perfil-img">
+                                    <img src="{% static 'imagenes/03.png' %}"/>
+                                </div>
+                                <div class="usuario">
+                                    <strong>Catalina Medina</strong>
+                                    <span>CaMedina@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="Comentarios">
+                                <i id="rayo">⭐</i>
+                                <i id="rayo">⭐</i>
+                                <i id="rayo">⭐</i>
+                                <i id="rayo">⭐</i>
+                                <i id="rayo"></i>
+                            </div>
+                            <div class="Mensaje">
+                                <p> Excelente servicio en el taller. Rápido, profesional y asequible.
+                                    ¡Definitivamente regresaré para futuras reparaciones!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Comentario-box">
+                    <div class="slide">
+                        <div class="Perfil">
+                            <div class="Perfil-img">
+                                <img src="{% static 'imagenes/01.png' %}"/>
+                            </div>
+                            <div class="usuario">
+                                <strong>Manuel Tabilo</strong>
+                                <span>Manu_tabilo@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="Comentarios">
+                            <i id="rayo">⭐</i>
+                            <i id="rayo">⭐</i>
+                            <i id="rayo">⭐</i>
+                            <i id="rayo">⭐</i>
+                            <i id="rayo">⭐</i>
+                        </div>
+                        <div class="Mensaje">
+                            <p>Estoy absolutamente impresionado con el servicio del taller mecánico.
+                                Mi coche nunca ha funcionado mejor y el personal fue increíblemente amable y profesional.
+                                ¡Definitivamente volveré para futuros servicios!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Comentarios-container">
+                    <div class="Comentario-box">
+                        <div class="slide">
+                            <div class="Perfil">
+                                <div class="Perfil-img">
+                                    <img src="{% static 'imagenes/04.png' %}"/>
+                                </div>
+                                <div class="usuario">
+                                    <strong>Rene Puente</strong>
+                                    <span>LocoRene@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="Comentarios">
+                                <i id="rayo">⭐</i>
+                                <i id="rayo">⭐</i>
+                                <i id="rayo">⭐</i>
+                                <i id="rayo">⭐</i>
+                                <i id="rayo"></i>
+                            </div>
+                            <div class="Mensaje">
+                                <p> ¡Experiencia excepcional en el taller mecánico! Resolvieron los problemas de mi
+                                    vehículo de manera eficiente y a un precio razonable. El equipo fue muy atento y
+                                    explicó todo claramente. ¡Recomiendo este taller a todos los que buscan un servicio
+                                    de calidad!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Comentarios-container">
+                    <div class="Comentario-box">
+                        <div class="slide">
+                            <div class="Perfil">
+                                <div class="Perfil-img">
+                                    <img src="{% static 'imagenes/02.png' %}"/>
+                                </div>
+                                <div class="usuario">
+                                    <strong>Valentina Kvith</strong>
+                                    <span>Valevith@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="Comentarios">
+                                <i id="rayo">⭐</i>
+                                <i id="rayo">⭐</i>
+                                <i id="rayo">⭐</i>
+                                <i id="rayo">⭐</i>
+                                <i id="rayo"></i>
+                            </div>
+                            <div class="Mensaje">
+                                <p> ¡Servicio de primera clase en el taller mecánico! No solo arreglaron mi coche a tiempo,
+                                    sino que también me mantuvieron informado durante todo el proceso.
+                                    El personal fue extremadamente servicial y amable.
+                                    ¡Sin duda, el mejor servicio al cliente que he experimentado!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Comentarios-container">
+                    <div class="Comentario-box">
+                        <div class="slide">
+                            <div class="Perfil">
+                                <div class="Perfil-img">
+                                    <img src="{% static 'imagenes/03.png' %}"/>
+                                </div>
+                                <div class="usuario">
+                                    <strong>Catalina Medina</strong>
+                                    <span>CaMedina@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="Comentarios">
+                                <i id="rayo">⭐</i>
+                                <i id="rayo">⭐</i>
+                                <i id="rayo">⭐</i>
+                                <i id="rayo">⭐</i>
+                                <i id="rayo"></i>
+                            </div>
+                            <div class="Mensaje">
+                                <p> Excelente servicio en el taller. Rápido, profesional y asequible.
+                                    ¡Definitivamente regresaré para futuras reparaciones!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="map">
+        <h3>Donde Encontrarnos</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3794.77676623459!2d-67.13455110600577!3d-17.989119976230324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e2b155696d58db%3A0xd5d651d340a8f6a!2sRAYO%20MCQUEEN!5e0!3m2!1ses-419!2scl!4v1715626459261!5m2!1ses-419!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- API -->
+    <script src="http://worldtimeapi.org/api/timezone/America/Santiago"></script>
+    <!-- Javascript API-->
+    <script src="{% static 'js/PaginaPrincipal.js' %}"></script>
+    <!-- footer-->
+    <footer class="fo-pagina" >
+    </footer>
+    <!--Header and Footer JS-->
+    <script src="{% static 'js/HeadAndFoot.js' %}"></script>
+    <!--bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
