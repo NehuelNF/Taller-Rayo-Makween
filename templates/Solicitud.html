@@ -1,5 +1,7 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +9,11 @@
     <!-- Logo -->
     <link rel="icon" type="image/png" sizes="32x32" href="https://seeklogo.com/images/P/Pixar_Cars_-_Rusteze-logo-CD235902CE-seeklogo.com.png"/>
     <!-- Css -->
-    <link rel="stylesheet" href="../css/solicitudStyle.css">
-    <link rel="stylesheet" href="../css/paginaPrincipalStyle.css">
+    <link rel="stylesheet" href="{% static 'css/solicitudStyle.css' %}">
+    <link rel="stylesheet" href="{% static 'css/paginaPrincipalStyle.css' %}">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script src="../js/PaginaPrincipal.js"></script>
 </head>
 <body class="fondinho">
     <!-- Parte superior -->
@@ -41,22 +42,22 @@
             </div>
 
             <div>
-                <input class="controls" type="text" name="numero" id="numero" placeholder="Ingrese su numero" onkeypress="return validarNumericos(event)" required>
+                <input class="controls" type="text" name="numero" id="numero" placeholder="Ingrese su número" onkeypress="return validarNumericos(event)" required>
             </div>
 
             <div>
                 <select class="controls" name="servicio" id="servicio" required>
                     <option value="" disabled selected>Tipo de servicio</option>
-                    <option value="1"> Mecanico</option>
+                    <option value="1"> Mecánico</option>
                     <option value="2"> Limpieza</option>
-                    <option value="3"> Revision Tecnica</option>
+                    <option value="3"> Revisión Técnica</option>
                     <option value="4"> Mantenimiento</option>
                     <option value="5"> Otros</option>
                 </select>
             </div>
 
             <div>
-                <textarea name="descripcion" id="descripcion" cols="40" rows="5" placeholder="   Descripcion" required></textarea>
+                <textarea name="descripcion" id="descripcion" cols="40" rows="5" placeholder="   Descripción" required></textarea>
             </div>
             
             <button onclick="validar()" class="botons">Enviar Solicitud</button>
@@ -64,19 +65,19 @@
         </form>       
     </section>
 
-
-    
     <!-- footer-->
-    <footer class="fo-pagina" >
-    </footer>
-    <!--Header and Footer JS-->
-    <script src="../js/HeadAndFoot.js"></script>
+    <footer class="fo-pagina"></footer>
 
+    <!--Header and Footer JS-->
+    <script src="{% static 'js/HeadAndFoot.js' %}" defer></script>
+    
     <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <!-- JavaScript-->
-    <script src="../js/solicitud.js"></script>
-    <!--bootstrap-->
+    <script src="{% static 'js/HeadAndFoot.js' %}"></script>
+    
+    <!-- JS -->
+    <script src="{% static 'JQuery-3.7.1/jquery-3.7.1.min.js' %}" defer></script>
+    
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

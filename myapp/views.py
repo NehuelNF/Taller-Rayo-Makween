@@ -39,4 +39,100 @@ def Solicitud(request):
     template = loader.get_template('Solicitud.html')
     return HttpResponse(template.render({}, request))
 
+# Definición de las vistas para cada producto del catálogo
 
+def A_Agua1(request):
+    template = loader.get_template('Catalogo/A-Agua1.html')
+    return HttpResponse(template.render({}, request))
+
+def A_Agua2(request):
+    template = loader.get_template('Catalogo/A-Agua2.html')
+    return HttpResponse(template.render({}, request))
+
+def A_AmortiguadorD(request):
+    template = loader.get_template('Catalogo/A-AmortiguadorD.html')
+    return HttpResponse(template.render({}, request))
+
+def A_AmortiguadorT(request):
+    template = loader.get_template('Catalogo/A-AmortiguadorT.html')
+    return HttpResponse(template.render({}, request))
+
+def A_Ampolleta(request):
+    template = loader.get_template('Catalogo/A-Ampolleta.html')
+    return HttpResponse(template.render({}, request))
+
+def A_Bateria1(request):
+    template = loader.get_template('Catalogo/A-Bateria1.html')
+    return HttpResponse(template.render({}, request))
+
+def A_Bateria2(request):
+    template = loader.get_template('Catalogo/A-Bateria2.html')
+    return HttpResponse(template.render({}, request))
+
+def A_Bateria3(request):
+    template = loader.get_template('Catalogo/A-Bateria3.html')
+    return HttpResponse(template.render({}, request))
+
+def A_Bateria4(request):
+    template = loader.get_template('Catalogo/A-Bateria4.html')
+    return HttpResponse(template.render({}, request))
+
+def A_Bieleta(request):
+    template = loader.get_template('Catalogo/A-Bieleta.html')
+    return HttpResponse(template.render({}, request))
+
+def A_Bobina1(request):
+    template = loader.get_template('Catalogo/A-Bobina1.html')
+    return HttpResponse(template.render({}, request))
+
+def A_Bobina2(request):
+    template = loader.get_template('Catalogo/A-Bobina2.html')
+    return HttpResponse(template.render({}, request))
+
+def A_BombaAgua(request):
+    template = loader.get_template('Catalogo/A-BombaAgua.html')
+    return HttpResponse(template.render({}, request))
+
+def A_BombaAuxiliar(request):
+    template = loader.get_template('Catalogo/A-BombaAuxiliar.html')
+    return HttpResponse(template.render({}, request))
+
+def A_Bujia1(request):
+    template = loader.get_template('Catalogo/A-Bujia1.html')
+    return HttpResponse(template.render({}, request))
+
+def A_Bujia2(request):
+    template = loader.get_template('Catalogo/A-Bujia2.html')
+    return HttpResponse(template.render({}, request))
+
+def A_Chapa(request):
+    template = loader.get_template('Catalogo/A-Chapa.html')
+    return HttpResponse(template.render({}, request))
+
+def A_Correa(request):
+    template = loader.get_template('Catalogo/A-Correa.html')
+    return HttpResponse(template.render({}, request))
+
+def A_CorreaVariador(request):
+    template = loader.get_template('Catalogo/A-CorreaVariador.html')
+    return HttpResponse(template.render({}, request))
+
+def A_Neumatico1(request):
+    template = loader.get_template('Catalogo/A-Neumatico1.html')
+    return HttpResponse(template.render({}, request))
+
+def A_Neumatico2(request):
+    template = loader.get_template('Catalogo/A-Neumatico2.html')
+    return HttpResponse(template.render({}, request))
+
+def A_Neumatico3(request):
+    template = loader.get_template('Catalogo/A-Neumatico3.html')
+    return HttpResponse(template.render({}, request))
+
+def A_Termostato1(request):
+    template = loader.get_template('Catalogo/A-Termostato1.html')
+    return HttpResponse(template.render({}, request))
+
+def A_Termostato2(request):
+    template = loader.get_template('Catalogo/A-Termostato2.html')
+    return HttpResponse(template.render({}, request))

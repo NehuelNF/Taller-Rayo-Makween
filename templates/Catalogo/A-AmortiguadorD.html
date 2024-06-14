@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Producto </title>
     <link rel="icon" type="image/png" sizes="32x32" href="https://seeklogo.com/images/P/Pixar_Cars_-_Rusteze-logo-CD235902CE-seeklogo.com.png"/>
-    <link rel="stylesheet" href="../css/paginaPrincipalStyle.css">
-    <link rel="stylesheet" href="../css/productoStyle.css">
+    <link rel="stylesheet" href="{% static 'css/paginaPrincipalStyle.css' %}">
+    <link rel="stylesheet" href="{% static 'css/productoStyle.css' %}">
     <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script src="../js/PaginaPrincipal.js"></script>
+    <script src="{% static 'js/PaginaPrincipal.js' %}"></script>
     <!--js-->
-    <script src="../js/CarritoNoDis.js"></script>
+    <script src="{% static 'js/CarritoNoDis.js' %}"></script>
 </head>
 <body>
     <!-- Parte superior -->
@@ -22,30 +24,25 @@
     <div class="tarjeta">
         <div class="contenido">
         <div class="ladoIzq">
-        <h2 class="titulo">Bujía</h2>
+        <h2 class="titulo">Amortiguador delantero</h2>
         <div class="cuerpo">
             <ul class="card-text">
-                <li type="disc">Bujía de 5/8 (16MM)</li>
-                <li type="disc">Diámetro de Hilo Bujía (Mm) 14</li>
-                <li type="disc">Equivalencia Denso K16PR-U</li>
-                <li type="disc">Tipo de Asiento CON GOLILLA</li>
-                <li type="disc">Tipo de Electrodo PROYECTADO</li>
-                <li type="disc">Luz (Mm) 1.1</li>
-                <li type="disc">Largo de Hilo Bujía (Mm) 19</li>
-                <li type="disc">Equivalencia Ngk BKR5E</li>
-                <li type="disc">Material Electrodo NIQUEL</li>
-                <li type="disc">Cantidad de Electrodos 1 ELECTRODO</li>
-                <li type="disc">País China</li>
-                <li type="disc">Ancho de caja (cm) 3</li>
-                <li type="disc">Altura de caja (cm) 3</li>
-                <li type="disc">Longitud de caja (cm) 9</li>
-                <li type="disc">Peso bruto de caja (kg) 0.1</li>
+                <li type="disc">Tipo Amortiguador GAS</li>
+                <li type="disc">Tipo Anclaje ESPIGA</li>
+                <li type="disc">Forma Amortiguador SEMI ESTRUCTURA</li>
+                <li type="disc">Código Kyb 339270</li>
+                <li type="disc">País Multi Origen</li>
+                <li type="disc">Ancho de caja (cm) 15</li>
+                <li type="disc">Altura de caja (cm) 15</li>
+                <li type="disc">Longitud de caja (cm) 51</li>
+                <li type="disc">Peso bruto de caja (kg) 4.3</li>
+
             </ul>
             <a class="btonn" href="#">Comprar</a>
         </div> 
         </div>
         <div class="ladoDer">
-            <img src="../imagenes/bujía1.jpg" /></div>
+            <img src="{% static 'imagenes/amortiguadorde.jpg' %}" /></div>
         </div>
     </div>
 
@@ -53,7 +50,7 @@
     <footer class="fo-pagina" >
     </footer>
     <!--Header and Footer JS-->
-    <script src="../js/HeadAndFootCat.js"></script>
+    <script src="{% static 'js/HeadAndFootCat.js' %}"></script>
         <!--bootstrap-->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
