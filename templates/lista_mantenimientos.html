@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Mantenimientos</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Lista de Mantenimientos</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre del Mecánico</th>
+                <th>Zona Trabajada</th>
+                <th>Pieza Modificada</th>
+                <th>Comentarios Adicionales</th>
+                <th>Fecha y Hora</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for mantenimiento in mantenimientos %}
+            <tr>
+                <td>{{ mantenimiento.id }}</td>
+                <td>{{ mantenimiento.mecanico }}</td>
+                <td>{{ mantenimiento.zona }}</td>
+                <td>{{ mantenimiento.pieza }}</td>
+                <td>{{ mantenimiento.comentarios }}</td>
+                <td>{{ mantenimiento.fecha_hora }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

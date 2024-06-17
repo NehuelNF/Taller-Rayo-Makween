@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .models import Mantenimiento
 from django.http import HttpResponse
 from django.template import loader
 # Create your views here.
@@ -38,6 +39,29 @@ def Registrar(request):
 def Solicitud(request):
     template = loader.get_template('Solicitud.html')
     return HttpResponse(template.render({}, request))
+
+def Servicio(request):
+    if request.method == 'POST':
+        mecanico = request.POST['mecanico']
+        zona = request.POST['zona']
+        pieza = request.POST['piezas']
+        comentarios = request.POST['comentarios']
+
+        Mantenimiento.objects.create(
+            mecanico=mecanico,
+            zona=zona,
+            pieza=pieza,
+            comentarios=comentarios
+        )
+        
+        return HttpResponse("Mantenimiento registrado exitosamente")
+    return render(request, 'Servicio.html')
+
+def lista_mantenimientos(request):
+    mantenimientos = Mantenimiento.objects.all()
+    return render(request, 'lista_mantenimientos.html', {'mantenimientos': mantenimientos})
+
+
 
 # Definición de las vistas para cada producto del catálogo
 
@@ -136,3 +160,8 @@ def A_Termostato1(request):
 def A_Termostato2(request):
     template = loader.get_template('Catalogo/A-Termostato2.html')
     return HttpResponse(template.render({}, request))
+
+
+
+
+
