@@ -47,4 +47,5 @@ urlpatterns = [
     path('listar', views.listar, name='listar'),
     path('listarM', views.listarM, name='listarM'),
     path('listarS', views.listarS, name='listarS'),
+    path('mecanicos/', views.listarM, name='listarM'),
 ]

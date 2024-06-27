@@ -225,7 +225,7 @@ def agregar(request):
                                         direccion=direccion,
                                         )
         
-        return HttpResponse("Mecanico registrado exitosamente")
+       
     return render(request, 'Administracion/agregar.html')
 
 @login_required
@@ -237,9 +237,9 @@ def listar(request):
 
 
 def listarM(request):
-    Mecanicos = Mecanico.objects.all()
+    mecanicos = Mecanico.objects.all()
     contexto = {
-        'Mecanicos': Mecanicos
+        'mecanicos': mecanicos
     }
     return render(request, 'Administracion/listarM.html', contexto)
 
