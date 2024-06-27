@@ -45,5 +45,4 @@ urlpatterns = [
     path('Menu', views.Menu, name='menu'),
     path('agregar', views.agregar, name='agregar'),
     path('listar', views.listar, name='listar'),
-    path('crud', views.crud, name='crud'),
 ]

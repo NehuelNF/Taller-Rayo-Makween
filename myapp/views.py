@@ -5,6 +5,11 @@ from django.template import loader
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.hashers import make_password
+from django.contrib.auth import authenticate, login
+from .decorators import staff_required, superuser_required
+from django.contrib.auth.decorators import login_required
+
+
 # Create your views here.
 
 def paginaPrincipal(request):
@@ -24,8 +29,23 @@ def Catalogo2(request):
     return HttpResponse(template.render({}, request))
 
 def Login(request):
-    template = loader.get_template('Login.html')
-    return HttpResponse(template.render({}, request))
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+        
+        if user is not None:
+            login(request, user)
+            if user.is_staff:
+                return redirect('menu')  # Redirigir a la página del menú para el personal
+            else:
+                return redirect('paginaPrincipal')  # Redirigir a la página principal para otros usuarios
+        else:
+            if not User.objects.filter(username=username).exists():
+                messages.error(request, 'Usuario inexistente')
+            else:
+                messages.error(request, 'Contraseña incorrecta')
+    return render(request, 'Login.html')
 
 def postulacion(request):
     template = loader.get_template('postulacion.html')
@@ -52,6 +72,8 @@ def Solicitud(request):
     template = loader.get_template('Solicitud.html')
     return HttpResponse(template.render({}, request))
 
+@login_required
+@staff_required
 def Servicio(request):
     if request.method == 'POST':
         mecanico = request.POST['mecanico']
@@ -174,33 +196,16 @@ def A_Termostato2(request):
     return HttpResponse(template.render({}, request))
 
 # Administracion
+
+@login_required
+@superuser_required
 def Menu(request):
     template = loader.get_template('Administracion/menu.html')
     return HttpResponse(template.render({}, request))
 
-def listar(request):
-    template = loader.get_template('Administracion/listar.html')
-    return HttpResponse(template.render({}, request))
 
-def Registrar(request):
-    if request.method == 'POST':
-        nombre = request.POST.get('usuario')
-        correo = request.POST.get('email')
-        contraseña = request.POST.get('pass')
-
-        # Verificar si el correo ya existe
-        if User.objects.filter(email=correo).exists():
-            return render(request, 'Registrar.html', {'correo_en_uso': True})
-
-        # Crear el objeto User y guardar en la base de datos
-        nuevo_usuario = User(username=nombre, email=correo, password=make_password(contraseña))
-        nuevo_usuario.save()
-        
-        return redirect('Login')
-    return render(request, 'Registrar.html')
-
-
-
+@login_required
+@superuser_required
 def agregar(request):
     if request.method == 'POST':
         rut = request.POST['rut']
@@ -223,8 +228,9 @@ def agregar(request):
         return HttpResponse("Mecanico registrado exitosamente")
     return render(request, 'Administracion/agregar.html')
 
-
-def crud(request):
+@login_required
+@superuser_required
+def listar(request):
     mecanico=Mecanico.objects.all()
     context={"mecanico":Mecanico}
     return render(request, 'Administracion/listar.html', context)
