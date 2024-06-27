@@ -1,0 +1,61 @@
+.container {
+    margin-top: 5rem;
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #495057;
+}
+
+.boton{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.btna {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+    background-color: rgb(196, 166, 2);
+    border: none;
+    color: white;
+}
+
+.btna:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.btns{
+    background-color: red;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.btns:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+form .mb-3 {
+    display: flex;
+}
+
+form .mb-3 label {
+    flex-basis: 20%;
+}
