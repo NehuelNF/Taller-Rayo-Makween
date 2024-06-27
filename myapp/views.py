@@ -2,6 +2,9 @@ from django.shortcuts import render, redirect
 from .models import Mantenimiento
 from django.http import HttpResponse
 from django.template import loader
+from django.contrib import messages
+from django.contrib.auth.models import User
+from django.contrib.auth.hashers import make_password
 # Create your views here.
 
 def paginaPrincipal(request):
@@ -29,8 +32,21 @@ def postulacion(request):
     return HttpResponse(template.render({}, request))
 
 def Registrar(request):
-    template = loader.get_template('Registrar.html')
-    return HttpResponse(template.render({}, request))
+    if request.method == 'POST':
+        nombre = request.POST.get('usuario')
+        correo = request.POST.get('email')
+        contraseña = request.POST.get('pass')
+
+        # Verificar si el correo ya existe
+        if User.objects.filter(email=correo).exists():
+            return render(request, 'Registrar.html', {'correo_en_uso': True})
+
+        # Crear el objeto User y guardar en la base de datos
+        nuevo_usuario = User(username=nombre, email=correo, password=make_password(contraseña))
+        nuevo_usuario.save()
+        
+        return redirect('Login')
+    return render(request, 'Registrar.html')
 
 def Solicitud(request):
     template = loader.get_template('Solicitud.html')
@@ -156,7 +172,6 @@ def A_Termostato1(request):
 def A_Termostato2(request):
     template = loader.get_template('Catalogo/A-Termostato2.html')
     return HttpResponse(template.render({}, request))
-
 
 # Administracion
 def Menu(request):
