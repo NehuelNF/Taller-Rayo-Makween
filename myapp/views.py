@@ -175,7 +175,7 @@ def A_Termostato2(request):
 
 # Administracion
 def Menu(request):
-    template = loader.get_template('Administracion/Menu.html')
+    template = loader.get_template('Administracion/menu.html')
     return HttpResponse(template.render({}, request))
 
 def listar(request):
