@@ -158,6 +158,8 @@ def A_Termostato2(request):
     return HttpResponse(template.render({}, request))
 
 
-
-
+# Administracion
+def Menu(request):
+    template = loader.get_template('Administracion/Menu.html')
+    return HttpResponse(template.render({}, request))
 
