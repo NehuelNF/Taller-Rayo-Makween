@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rechazado</title>
+    {% if 'redirected' in request.GET %}
+        <meta http-equiv="refresh" content="5;url={% url 'paginaPrincipal' %}">
+        <script>
+            setTimeout(function() {
+                window.location.href = "{% url 'paginaPrincipal' %}";
+            }, 5000);
+        </script>
+    {% endif %}
+</head>
+<body>
+    <!-- Mostrar mensajes -->
+    {% if messages %}
+        <div class="alert alert-danger mt-3">
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+</body>
+</html>

@@ -12,29 +12,11 @@
     <link rel="stylesheet" href="{% static 'bootstrap-5.3.3/css/bootstrap.css' %}">
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/PaginaPrincipal.js' %}"></script>
-
-    {% if 'redirected' in request.GET %}
-        <meta http-equiv="refresh" content="5;url={% url 'paginaPrincipal' %}">
-        <script>
-            setTimeout(function() {
-                window.location.href = "{% url 'paginaPrincipal' %}";
-            }, 5000);
-        </script>
-    {% endif %}
 </head>
 <body>
     <!-- Parte superior -->
     {% include "navbar.html"%}
 
-    <!-- Mostrar mensajes -->
-    {% if messages %}
-        <div class="alert alert-danger mt-3">
-            {% for message in messages %}
-                <p>{{ message }}</p>
-            {% endfor %}
-        </div>
-    {% endif %}
-    
     <!-- Carousel -->
     <center>
         <div class="carousel slide" id="carouselExampleAutoplaying" data-bs-ride="carousel">
