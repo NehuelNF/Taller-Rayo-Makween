@@ -39,5 +39,8 @@ urlpatterns = [
     path('A-Neumatico2', views.A_Neumatico2, name='A-Neumatico2'),
     path('A-Neumatico3', views.A_Neumatico3, name='A-Neumatico3'),
     path('A-Termostato1', views.A_Termostato1, name='A-Termostato1'),
-    path('A-Termostato2', views.A_Termostato2, name='A-Termostato2'), 
+    path('A-Termostato2', views.A_Termostato2, name='A-Termostato2'),
+
+    # Administracion
+    path('menu', views.Menu, name='menu'),
 ]
