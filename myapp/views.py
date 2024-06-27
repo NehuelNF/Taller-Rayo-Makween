@@ -249,3 +249,7 @@ def listarS(request):
         'Servicios': Servicios
     }
     return render(request, 'Administracion/listarS.html', contexto)
+
+def Modificar(request):
+    template = loader.get_template('Administracion/Modificar.html')
+    return HttpResponse(template.render({}, request))

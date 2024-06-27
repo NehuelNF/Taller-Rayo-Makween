@@ -48,4 +48,5 @@ urlpatterns = [
     path('listarM', views.listarM, name='listarM'),
     path('listarS', views.listarS, name='listarS'),
     path('mecanicos/', views.listarM, name='listarM'),
+    path('modificar', views.Modificar, name='modificar'),
 ]
