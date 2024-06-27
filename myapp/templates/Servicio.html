@@ -18,27 +18,9 @@
     <!-- JS -->
     <script src="{% static 'js/servicioForm.js' %}" defer></script>
 
-    {% if 'redirected' in request.GET %}
-        <meta http-equiv="refresh" content="5;url={% url 'Servicio' %}">
-        <script>
-            setTimeout(function() {
-                window.location.href = "{% url 'Servicio' %}";
-            }, 5000);
-        </script>
-    {% endif %}
 </head>
 
 <body>
-
-    <!-- Mostrar mensajes -->
-    {% if messages %}
-        <div class="alert alert-danger mt-3">
-            {% for message in messages %}
-                <p>{{ message }}</p>
-            {% endfor %}
-        </div>
-    {% endif %}
-
     <!--Formulario-->
     <div class="title-container">
         <h2 id="trabaja">Registrar Mantenimiento</h2>
@@ -52,9 +34,9 @@
                 <label for="mecanico">Mecánico</label>
                 <select class="form-control" name="mecanico" id="mecanico">
                     <option value="">Seleccione un mecánico</option>
-                    <option value="Tulio Triviño">Tulio Triviño</option>
-                    <option value="Wa-tong Loyola">Wa-tong Loyola</option>
-                    <option value="Romás Rojas">Romás Rojas</option>
+                    {% for mecanico in mecanicos %}
+                        <option value="{{ mecanico.nombre }} {{ mecanico.apellido_paterno }}">{{ mecanico.nombre }} {{mecanico.apellido_paterno }}</option>
+                    {% endfor %}
                 </select>
                 <small class="form-text text-danger" id="error_mecanico"></small>
             </div>
