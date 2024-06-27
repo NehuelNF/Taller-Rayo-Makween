@@ -16,9 +16,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="https://seeklogo.com/images/P/Pixar_Cars_-_Rusteze-logo-CD235902CE-seeklogo.com.png"/>
 </head>
 <body>
-
     <div class="fondo">
-        <form action="#">
+        <form action="{% url 'Registrar' %}" method="post">
+            {% csrf_token %}
             <h1>Registrar</h1>
 
             <div class="contenedor">
@@ -27,6 +27,11 @@
 
             <div class="contenedor">
                 <input type="email" name="email" id="email" placeholder="Correo Electrónico" required>
+                <div id="correoError" class="text-danger">
+                    {% if correo_en_uso %}
+                        Correo ya en uso
+                    {% endif %}
+                </div>
             </div>
 
             <div class="contenedor">
@@ -51,5 +56,6 @@
 
     <!-- JS -->
     <script src="{% static 'js/registrar.js' %}"></script>
+    <script src="{% static 'bootstrap-5.3.3/js/bootstrap.min.js' %}"></script>
 </body>
 </html>

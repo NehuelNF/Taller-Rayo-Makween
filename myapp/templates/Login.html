@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,12 +7,11 @@
     <title>Login</title>
     <script src="https://kit.fontawesome.com/6eec8718dd.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/png" sizes="32x32" href="https://seeklogo.com/images/P/Pixar_Cars_-_Rusteze-logo-CD235902CE-seeklogo.com.png"/>
-    {% load static %}
     <!-- Css -->
     <link rel="stylesheet" href="{% static 'css/loginStyle.css' %}">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="{% static 'bootstrap-5.3.3/css/bootstrap.css' %}">
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'bootstrap-5.3.3/js/bootstrap.min.js' %}"></script>
     <link rel="icon" type="image/png" sizes="32x32" href="https://seeklogo.com/images/P/Pixar_Cars_-_Rusteze-logo-CD235902CE-seeklogo.com.png"/>
 </head>
 <body>
@@ -36,16 +36,16 @@
             <button onclick="validarLogin()" type="submit" class="btn1">Iniciar sesión</button>
 
             <div class="registro-enlaces">
-                <p>¿No tienes cuenta? <a href="Registrar.html"> Crear</a></p>
+                <p>¿No tienes cuenta? <a href="{% url 'Registrar' %}"> Crear</a></p>
             </div>
 
             <div class="contenedor">
-                <center><a href="paginaPrincipal.html"><button type="button" class="btn2"><i class="bi bi-arrow-left"></i></button></a></center>
+                <center><a href="{% url 'paginaPrincipal' %}"><button type="button" class="btn2"><i class="bi bi-arrow-left"></i></button></a></center>
             </div>
         </form>
     </div>
 
     <!-- JavaScript -->
-    <script src="js/login.js"></script>
+    <script src="{% static 'js/login.js' %}"></script>
 </body>
 </html>
