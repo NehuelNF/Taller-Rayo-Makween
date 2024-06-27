@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Mantenimiento
+from .models import Mantenimiento, Mecanico
 from django.http import HttpResponse
 from django.template import loader
 from django.contrib import messages
@@ -178,10 +178,53 @@ def Menu(request):
     template = loader.get_template('Administracion/Menu.html')
     return HttpResponse(template.render({}, request))
 
-def Agregar(request):
-    template = loader.get_template('Administracion/Agregar.html')
+def listar(request):
+    template = loader.get_template('Administracion/listar.html')
     return HttpResponse(template.render({}, request))
 
-def Listado(request):
-    template = loader.get_template('Administracion/Listado.html')
-    return HttpResponse(template.render({}, request))
+def Registrar(request):
+    if request.method == 'POST':
+        nombre = request.POST.get('usuario')
+        correo = request.POST.get('email')
+        contraseña = request.POST.get('pass')
+
+        # Verificar si el correo ya existe
+        if User.objects.filter(email=correo).exists():
+            return render(request, 'Registrar.html', {'correo_en_uso': True})
+
+        # Crear el objeto User y guardar en la base de datos
+        nuevo_usuario = User(username=nombre, email=correo, password=make_password(contraseña))
+        nuevo_usuario.save()
+        
+        return redirect('Login')
+    return render(request, 'Registrar.html')
+
+
+
+def agregar(request):
+    if request.method == 'POST':
+        rut = request.POST['rut']
+        nombre = request.POST['nombre']
+        aPaterno = request.POST['paterno']
+        aMaterno = request.POST['materno']
+        telefono = request.POST['telefono']
+        email = request.POST['email']
+        direccion = request.POST['direccion']
+
+        Mecanico.objects.create(        rut = rut,
+                                        nombre = nombre,
+                                        apellido_paterno=aPaterno,
+                                        apellido_materno=aMaterno,
+                                        telefono=telefono,
+                                        email=email,
+                                        direccion=direccion,
+                                        )
+        
+        return HttpResponse("Mecanico registrado exitosamente")
+    return render(request, 'Administracion/agregar.html')
+
+
+def crud(request):
+    mecanico=Mecanico.objects.all()
+    context={"mecanico":Mecanico}
+    return render(request, 'Administracion/listar.html', context)
