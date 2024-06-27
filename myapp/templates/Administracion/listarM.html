@@ -44,54 +44,31 @@
         </ul>
     </div>
 
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="mb-4">Editar datos de alumnos</h1>
-                <a href="{% url 'agregar' %}" class="btn btn-primary mb-3">Agregar Mecanico</a>
+    <h1>Lista de Mecánicos</h1>
+    <table border="1">
+        <tr>
+            <th>RUT</th>
+            <th>Nombre</th>
+            <th>Apellido Paterno</th>
+            <th>Apellido Materno</th>
+            <th>Teléfono</th>
+            <th>Email</th>
+            <th>Dirección</th>
+        </tr>
+        {% for mecanico in mecanicos %}
+        <tr>
+            <td>{{ mecanico.rut }}</td>
+            <td>{{ mecanico.nombre }}</td>
+            <td>{{ mecanico.apellido_paterno }}</td>
+            <td>{{ mecanico.apellido_materno }}</td>
+            <td>{{ mecanico.telefono }}</td>
+            <td>{{ mecanico.email }}</td>
+            <td>{{ mecanico.direccion }}</td>
+        </tr>
+        {% endfor %}
+    </table>
 
-                <div id="idMensajes">
-                    {% if mensajes %}
-                        {{ mensaje }}
-                    {% endif %}
-                </div>
 
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Rut</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Apellido P.</th>
-                            <th scope="col">Apellido M.</th>
-                            <th scope="col">Eliminar</th>
-                            <th scope="col">Modificar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for x in mecanico %}
-                            <tr>
-                                <td>{{ x.rut }}</td>
-                                <td>{{ x.nombre }}</td>
-                                <td>{{ x.apellido_paterno }}</td>
-                                <td>{{ x.apellido_materno }}</td>
-                                <td>
-                                    <!-- Agrega aquí el enlace o botón para eliminar -->
-                                    <a href="{% url 'alumnos_del' pk=x.rut %}">Eliminar</a>
-                                </td>
-                                <td>
-                                    <!-- Agrega aquí el enlace o botón para modificar -->
-                                    <a href="{% url 'alumnos_findEdit' pk=x.rut %}">Modificar</a>
-                                </td>
-                            </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    <br>
-    <br>
-    <br>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

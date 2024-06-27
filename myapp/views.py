@@ -234,3 +234,11 @@ def listar(request):
     mecanico=Mecanico.objects.all()
     context={"mecanico":Mecanico}
     return render(request, 'Administracion/listar.html', context)
+
+
+def listarM(request):
+    Mecanicos = Mecanico.objects.all()
+    contexto = {
+        'Mecanicos': Mecanicos
+    }
+    return render(request, 'Administracion/listaM.html', contexto)
