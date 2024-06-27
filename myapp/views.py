@@ -178,3 +178,10 @@ def Menu(request):
     template = loader.get_template('Administracion/Menu.html')
     return HttpResponse(template.render({}, request))
 
+def Agregar(request):
+    template = loader.get_template('Administracion/Agregar.html')
+    return HttpResponse(template.render({}, request))
+
+def Listado(request):
+    template = loader.get_template('Administracion/Listado.html')
+    return HttpResponse(template.render({}, request))

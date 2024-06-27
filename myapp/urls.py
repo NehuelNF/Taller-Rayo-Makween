@@ -42,5 +42,7 @@ urlpatterns = [
     path('A-Termostato2', views.A_Termostato2, name='A-Termostato2'),
 
     # Administracion
-    path('menu', views.Menu, name='menu'),
+    path('Menu', views.Menu, name='menu'),
+    path('Listado', views.Menu, name='listado'),
+    path('Agregar', views.Menu, name='agregar'),
 ]
