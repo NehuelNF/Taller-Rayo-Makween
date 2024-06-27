@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Administracion </title>
+    <link rel="icon" type="image/png" sizes="32x32" href="https://seeklogo.com/images/P/Pixar_Cars_-_Rusteze-logo-CD235902CE-seeklogo.com.png"/>
+    <!-- Css -->
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Listado.css' %}">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'bootstrap-5.3.3/css/bootstrap.css' %}">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <style>
+        body {
+            background: rgb(223, 141, 59);
+        }
+    </style>
+</head>
+<body>
+    <div class="navbarM">
+        <ul class="nav me-auto mb-4 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'menu' %}">Menu</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'listar' %}">Listado</a>
+            </li>
+        </ul>
+        <a class="logo" href="{% url 'menu' %}">
+            <img src="{% static 'imagenes/Adm.png' %}" alt="logo" width="140px" height="100px">
+        </a>
+        <ul class="nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'agregar' %}">Agregar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Modificar</a>
+            </li>
+        </ul>
+    </div>
+    <h1 id="list">Listado de mecanicos y servicios realizados</h1>
+    <div class="doble">
+        <a href="{% url 'agregar' %}"><img class="im1" src="{% static 'imagenes/mecanicos.png' %}" alt="Listado" width="440px" height="400px"></a>
+        <a href="{% url 'menu' %}"><img class="im2" src="{% static 'imagenes/servicios.png' %}" alt="Listado" width="440px" height="400px"></a>
+      </div>
+</body>
+</html>
