@@ -18,7 +18,6 @@
             background: rgb(223, 141, 59);
         }
     </style>
-
 </head>
 <body>
     <!-- Parte superior -->
@@ -28,7 +27,7 @@
                 <a class="nav-link" href="{% url 'menu' %}">Menu</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'listar' %}">Listado</a>
+                <a class="nav-link" href="{% url 'lista' %}">Listado</a>
             </li>
         </ul>
         <a class="logo" href="{% url 'menu' %}">
@@ -36,7 +35,7 @@
         </a>
         <ul class="nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'agrega' %}">Agregar</a>
+                <a class="nav-link" href="{% url 'agregar' %}">Agregar</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'modificar' %}">Modificar</a>
@@ -48,7 +47,7 @@
         <div class="row">
             <div class="col-md-12">
                 <h1 class="mb-4">Listado Mecanicos</h1>
-                <a href="{% url 'agregar' %}" class="btn btn-primary mb-3">Agregar Mecanico</a>
+                <a href="{% url 'listarM' %}" class="btn btn-primary mb-3">Ver listado de mecanicos</a>
 
                 <div id="idMensajes">
                     {% if mensajes %}
@@ -63,10 +62,6 @@
                             <th scope="col">Nombre</th>
                             <th scope="col">Apellido P.</th>
                             <th scope="col">Apellido M.</th>
-                            <th scope="col">Telefono</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Direccion</th>
-                            
                         </tr>
                     </thead>
                     <tbody>
@@ -76,9 +71,6 @@
                                 <td>{{ mecanico.nombre }}</td>
                                 <td>{{ mecanico.apellido_paterno }}</td>
                                 <td>{{ mecanico.apellido_materno }}</td>
-                                <td>{{ mecanico.telefono }}</td>
-                                <td>{{ mecanico.email }}</td>
-                                <td>{{ mecanico.direccion }}</td>
                             </tr>
                         {% endfor %}
                     </tbody>
@@ -86,13 +78,6 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
-    <br>
-
-
-
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

@@ -89,7 +89,7 @@ def Servicio(request):
         )
         
         return HttpResponse("Mantenimiento registrado exitosamente")
-    return render(request, 'Servicio.html')
+    return render(request, 'Administracion/Servicio.html')
 
 def lista_mantenimientos(request):
     mantenimientos = Mantenimiento.objects.all()
@@ -252,4 +252,8 @@ def listarS(request):
 
 def Modificar(request):
     template = loader.get_template('Administracion/Modificar.html')
+    return HttpResponse(template.render({}, request))
+
+def agrega(request):
+    template = loader.get_template('Administracion/agrega.html')
     return HttpResponse(template.render({}, request))

@@ -8,6 +8,7 @@
     <title>Formulario de Mantenimiento</title>
 
     <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
     <link rel="stylesheet" href="{% static 'css/servicioForm.css' %}">
 
     <!-- Bootstrap CSS -->
@@ -29,6 +30,27 @@
 </head>
 
 <body>
+    <div class="navbarM">
+        <ul class="nav me-auto mb-4 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'menu' %}">Menu</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'listar' %}">Listado</a>
+            </li>
+        </ul>
+        <a class="logo" href="{% url 'menu' %}">
+            <img src="{% static 'imagenes/Adm.png' %}" alt="logo" width="140px" height="100px">
+        </a>
+        <ul class="nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'agrega' %}">Agregar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'modificar' %}">Modificar</a>
+            </li>
+        </ul>
+    </div>
 
     <!-- Mostrar mensajes -->
     {% if messages %}
