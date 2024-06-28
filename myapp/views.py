@@ -272,3 +272,53 @@ def agrega(request):
 def Rechazado(request):
     template = loader.get_template('Rechazado.html')
     return HttpResponse(template.render({}, request))
+
+def mecanicos_findEdit(request,pk):
+    if pk != "":
+        mecanico=Mecanico.objects.get(rut=pk)
+        context={'mecanico':mecanico}
+        if mecanico:
+            return render(request, 'Administracion/editM.html', context)
+        else:
+            context={'mensaje':'Error, rut no existe...'}
+            return render(request, 'Administracion/listarM.html', context)
+
+def mecanicos_del(request,pk):
+    context={}
+    try:
+        mecanico=Mecanico.objects.get(rut=pk)
+        mecanico.delete()
+        mensaje="Bien, datos aliminados..."
+        mecanico = Mecanico.objects.all()
+        context = {'mecanico':mecanico, 'mensaje':mensaje }
+        return render(request, 'Administracion/listarM.html', context)
+    except:
+        mensaje="Error, rut no existe..."
+        mecanico = Mecanico.objects.all()
+        context = {'mecanico': mecanico, 'mensaje': mensaje}
+        return render(request, 'Administracion/listarM.html', context)
+
+def mecanicosUpdate(request):
+    if request.method == "POST":
+        rut=request.POST["rut"]
+        nombre=request.POST["nombre"]
+        aPaterno=request.POST["paterno"]
+        aMaterno=request.POST["materno"]
+        telefono=request.POST["telefono"]
+        email=request.POST["email"]
+        direccion=request.POST["direccion"]
+        mecanico = Mecanico()
+        mecanico.rut=rut
+        mecanico.nombre=nombre
+        mecanico.apellido_paterno=aPaterno
+        mecanico.apellido_materno=aMaterno
+        mecanico.telefono=telefono
+        mecanico.email=email
+        mecanico.direccion=direccion
+        mecanico.save()
+        context={'mensaje':"Ok, datos actualizados...",'mecanico':mecanico}
+        return render(request, 'Administracion/editM.html', context)
+    else:
+        mecanico = Mecanico.objects.all()
+        context= {'mecanico':mecanico}
+        return render(request, 'Administracion/editM.html', context)

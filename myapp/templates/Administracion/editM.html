@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Administracion </title>
+    <link rel="icon" type="image/png" sizes="32x32" href="https://seeklogo.com/images/P/Pixar_Cars_-_Rusteze-logo-CD235902CE-seeklogo.com.png"/>
+    <!-- Css -->
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Listado.css' %}">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'bootstrap-5.3.3/css/bootstrap.css' %}">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <style>
+        body {
+            background: rgb(223, 141, 59);
+        }
+    </style>
+</head>
+<body>
+    <div class="navbarM">
+        <ul class="nav me-auto mb-4 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'menu' %}">Menu</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'listar' %}">Listado</a>
+            </li>
+        </ul>
+        <a class="logo" href="{% url 'menu' %}">
+            <img src="{% static 'imagenes/Adm.png' %}" alt="logo" width="140px" height="100px">
+        </a>
+        <ul class="nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'agrega' %}">Agregar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'modificar' %}">Modificar</a>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                {% if mecanico %}
+                <h2 class="text-center mb-4">Formulario CRUD de Mecanicos</h2>
+                <form action="{% url 'mecanicosUpdate' %}" method="POST">
+                    {% csrf_token %}
+                    <!-- Campos para ingresar -->
+                    <div class="mb-3">
+                        <label class="form-label">Rut:</label>
+                        <input type="text" name="rut" value="{{mecanico.rut}}" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Nombre:</label>
+                        <input type="text" name="nombre" value="{{mecanico.nombre}}" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Apellido Paterno:</label>
+                        <input type="text" name="paterno" value="{{mecanico.apellido_paterno}}" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Apellido Materno:</label>
+                        <input type="text" name="materno" value="{{mecanico.apellido_materno}}" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Telefono:</label>
+                        <input type="text" name="telefono" value="{{mecanico.telefono}}" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email:</label>
+                        <input type="email" name="email" value="{{mecanico.email}}" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Dirección:</label>
+                        <input type="text" name="direccion" value="{{mecanico.direccion}}" class="form-control" required>
+                    </div>
+    
+                    <!-- Botón de envío -->
+                    <input type="submit" name="opcion" value="Actualizar" class="btn btn-primary">
+                    <a href="{% url 'ModificarM' %}" class="btn btn-secondary">Volver</a>
+                </form>
+                <br>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
