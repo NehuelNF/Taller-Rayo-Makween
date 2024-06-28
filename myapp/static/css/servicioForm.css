@@ -1,88 +1,3 @@
-/* General styles */
-.postulacion {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-}
-
-.postulacion_grupo {
-    margin-bottom: 15px;
-}
-
-.postulacion_label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-}
-
-.postulacion-input {
-    position: relative;
-}
-
-.postulacion_input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.postulacion_input-error {
-    color: red;
-    display: none;
-}
-
-.postulacion_grupo-error .postulacion_input-error {
-    display: block;
-}
-
-.postulacion_grupo-btn-enviar {
-    text-align: center;
-}
-
-.postulacion_btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.postulacion_btn:hover {
-    background-color: #0056b3;
-}
-
-.postulacion_mensaje-exito {
-    color: green;
-    display: none;
-    margin-top: 10px;
-}
-
-.postulacion_validacion {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.postulacion_validacion:before {
-    content: "\f00c";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    color: green;
-    display: none;
-}
-
-.postulacion_input:invalid + .postulacion_validacion:before {
-    content: "\f00d";
-    color: red;
-    display: block;
-}
-
 /* Title styles */
 .title-container {
     background-color: red;
@@ -94,24 +9,16 @@
 
 /* General styles */
 .container-fluid {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 900px;
     padding: 20px;
     background-color: #f9f9f9;
     border: 1px solid #ccc;
     border-radius: 10px;
 }
 
-.title-container {
-    background-color: red;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-bottom: 20px;
-}
-
 .form-group {
     margin-bottom: 15px;
+    max-width: 400px;
 }
 
 .form-control.is-invalid {
@@ -123,3 +30,10 @@
     color: red;
 }
 
+.form-group.text-center {
+    margin-top: 15px;
+}
+
+.form-group.text-center .btn {
+    padding: 10px;
+}
