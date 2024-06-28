@@ -48,13 +48,6 @@
             <div class="col-md-12">
                 <h1 class="mb-4">Listado Mecanicos</h1>
                 <a href="{% url 'agregar' %}" class="btn btn-primary mb-3">Agregar Mecanico</a>
-
-                <div id="idMensajes">
-                    {% if mensajes %}
-                        {{ mensaje }}
-                    {% endif %}
-                </div>
-
                 <table class="table">
                     <thead>
                         <tr>
@@ -62,9 +55,8 @@
                             <th scope="col">Nombre</th>
                             <th scope="col">Apellido P.</th>
                             <th scope="col">Apellido M.</th>
-                            <th scope="col">Telefono</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Direccion</th>
+                            <th scope="col">Eliminar</th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -74,10 +66,10 @@
                                 <td>{{ mecanico.nombre }}</td>
                                 <td>{{ mecanico.apellido_paterno }}</td>
                                 <td>{{ mecanico.apellido_materno }}</td>
-                                <td>{{ mecanico.telefono }}</td>
-                                <td>{{ mecanico.email }}</td>
-                                <td>{{ mecanico.direccion }}</td>
-                                
+                                <td>
+                                    <!-- Agrega aquí el enlace o botón para eliminar -->
+                                    <a href="{% url 'ModificarE' pk=x.rut %}">Eliminar</a>
+                                </td>
                             </tr>
                         {% endfor %}
                     </tbody>
