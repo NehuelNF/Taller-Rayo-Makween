@@ -224,8 +224,6 @@ def agregar(request):
                                         email=email,
                                         direccion=direccion,
                                         )
-        
-       
     return render(request, 'Administracion/agregar.html')
 
 @login_required
@@ -256,4 +254,8 @@ def Modificar(request):
 
 def agrega(request):
     template = loader.get_template('Administracion/agrega.html')
+    return HttpResponse(template.render({}, request))
+
+def Rechazado(request):
+    template = loader.get_template('Rechazado.html')
     return HttpResponse(template.render({}, request))
