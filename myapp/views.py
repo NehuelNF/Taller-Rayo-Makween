@@ -244,9 +244,9 @@ def listarM(request):
     return render(request, 'Administracion/listarM.html', contexto)
 
 def listarS(request):
-    Servicios = Mantenimiento.objects.all()
+    mantenimientos = Mantenimiento.objects.all()
     contexto = {
-        'Servicios': Servicios
+        'mantenimientos': mantenimientos
     }
     return render(request, 'Administracion/listarS.html', contexto)
 
@@ -318,3 +318,4 @@ def mecanicosUpdate(request):
         mecanico = Mecanico.objects.all()
         context= {'mecanico':mecanico}
         return render(request, 'Administracion/editM.html', context)
+    
