@@ -53,9 +53,6 @@ urlpatterns = [
     path('mecanicos/', views.listarM, name='listarM'),
     path('modificar', views.Modificar, name='modificar'),
     path('agrega', views.agrega, name='agrega'),
-    path('modificarM', views.ModificarM, name='modificarM'),
-    path('mecanicos/', views.ModificarM, name='modificarM'),
-
     path('mecanicos_del/<str:pk>', views.mecanicos_del, name='mecanicos_del'),
     path('mecanicos_findEdit/<str:pk>', views.mecanicos_findEdit, name='mecanicos_findEdit'),
     path('mecanicosUpdate', views.mecanicosUpdate, name='mecanicosUpdate'),
