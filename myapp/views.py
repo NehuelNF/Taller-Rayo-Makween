@@ -33,11 +33,13 @@ def Login(request):
         username = request.POST.get('username')
         password = request.POST.get('password')
         user = authenticate(request, username=username, password=password)
-        
+
         if user is not None:
             login(request, user)
             if user.is_staff:
-                return redirect('menu')  # Redirigir a la página del menú para el personal
+                return redirect('Servicio')  # Redirigir a la página de registrar servicio realizado
+            elif user.is_superuser:
+                return redirect('menu') # Redirigir al menú de administración 
             else:
                 return redirect('paginaPrincipal')  # Redirigir a la página principal para otros usuarios
         else:
@@ -88,7 +90,7 @@ def Servicio(request):
             comentarios=comentarios
         )
         
-        return HttpResponse("Mantenimiento registrado exitosamente")
+        return redirect('listarS')
     else:
         mecanicos = Mecanico.objects.all()
         return render(request, 'Administracion/Servicio.html', {'mecanicos': mecanicos})
@@ -235,7 +237,8 @@ def listar(request):
     context={"mecanico":Mecanico}
     return render(request, 'Administracion/listar.html', context)
 
-
+@login_required
+@superuser_required
 def listarM(request):
     mecanicos = Mecanico.objects.all()
     contexto = {
@@ -243,6 +246,8 @@ def listarM(request):
     }
     return render(request, 'Administracion/listarM.html', contexto)
 
+@login_required
+@staff_required
 def listarS(request):
     mantenimientos = Mantenimiento.objects.all()
     contexto = {
@@ -250,10 +255,14 @@ def listarS(request):
     }
     return render(request, 'Administracion/listarS.html', contexto)
 
+@login_required
+@superuser_required
 def Modificar(request):
     template = loader.get_template('Administracion/Modificar.html')
     return HttpResponse(template.render({}, request))
 
+@login_required
+@superuser_required
 def Modificar(request):
     mecanicos = Mecanico.objects.all()
     contexto = {
@@ -261,6 +270,8 @@ def Modificar(request):
     }
     return render(request, 'Administracion/Modificar.html', contexto)
 
+@login_required
+@superuser_required
 def agrega(request):
     template = loader.get_template('Administracion/agrega.html')
     return HttpResponse(template.render({}, request))
@@ -269,6 +280,8 @@ def Rechazado(request):
     template = loader.get_template('Rechazado.html')
     return HttpResponse(template.render({}, request))
 
+@login_required
+@superuser_required
 def mecanicos_findEdit(request,pk):
     if pk != "":
         mecanico=Mecanico.objects.get(rut=pk)
@@ -279,6 +292,8 @@ def mecanicos_findEdit(request,pk):
             context={'mensaje':'Error, rut no existe...'}
             return render(request, 'Administracion/listar.html', context)
 
+@login_required
+@superuser_required
 def mecanicos_del(request,pk):
     context={}
     try:
@@ -294,6 +309,8 @@ def mecanicos_del(request,pk):
         context = {'mecanico': mecanico, 'mensaje': mensaje}
         return render(request, 'Administracion/listar.html', context)
 
+@login_required
+@superuser_required
 def mecanicosUpdate(request):
     if request.method == "POST":
         rut=request.POST["rut"]

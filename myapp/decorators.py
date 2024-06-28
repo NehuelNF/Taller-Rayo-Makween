@@ -8,7 +8,7 @@ def staff_required(view_func):
     def _wrapped_view_func(request, *args, **kwargs):
         if not request.user.is_staff:
             messages.error(request, 'Usted no cuenta con los permisos necesarios')
-            response = redirect('paginaPrincipal')
+            response = redirect('Rechazado')
             response['Location'] += '?redirected=true'
             return response
         return view_func(request, *args, **kwargs)
@@ -19,7 +19,7 @@ def superuser_required(view_func):
     def _wrapped_view_func(request, *args, **kwargs):
         if not request.user.is_superuser:
             messages.error(request, 'Usted no cuenta con los permisos necesarios')
-            response = redirect('paginaPrincipal')
+            response = redirect('Rechazado')
             response['Location'] += '?redirected=true'
             return response
         return view_func(request, *args, **kwargs)
