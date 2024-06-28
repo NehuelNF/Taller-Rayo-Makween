@@ -89,7 +89,9 @@ def Servicio(request):
         )
         
         return HttpResponse("Mantenimiento registrado exitosamente")
-    return render(request, 'Administracion/Servicio.html')
+    else:
+        mecanicos = Mecanico.objects.all()
+        return render(request, 'Administracion/Servicio.html', {'mecanicos': mecanicos})
 
 def lista_mantenimientos(request):
     mantenimientos = Mantenimiento.objects.all()
