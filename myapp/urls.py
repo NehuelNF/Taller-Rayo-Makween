@@ -49,11 +49,5 @@ urlpatterns = [
     path('listarS', views.listarS, name='listarS'),
     path('mecanicos/', views.listarM, name='listarM'),
     path('modificar', views.Modificar, name='modificar'),
-<<<<<<< HEAD
     path('agrega', views.agrega, name='agrega'),
-=======
-
-    # Error
-    path('Rechazado', views.Rechazado, name='Rechazado'),
->>>>>>> a4ae792749ff9b77e73b7041cf2e354a2d146186
 ]
