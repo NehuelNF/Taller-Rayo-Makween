@@ -8,7 +8,6 @@
     <title>Formulario de Mantenimiento</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
     <link rel="stylesheet" href="{% static 'css/servicioForm.css' %}">
 
     <!-- Bootstrap CSS -->
@@ -19,48 +18,9 @@
     <!-- JS -->
     <script src="{% static 'js/servicioForm.js' %}" defer></script>
 
-    {% if 'redirected' in request.GET %}
-        <meta http-equiv="refresh" content="5;url={% url 'Servicio' %}">
-        <script>
-            setTimeout(function() {
-                window.location.href = "{% url 'Servicio' %}";
-            }, 5000);
-        </script>
-    {% endif %}
 </head>
 
 <body>
-    <div class="navbarM">
-        <ul class="nav me-auto mb-4 mb-lg-0">
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'menu' %}">Menu</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'listar' %}">Listado</a>
-            </li>
-        </ul>
-        <a class="logo" href="{% url 'menu' %}">
-            <img src="{% static 'imagenes/Adm.png' %}" alt="logo" width="140px" height="100px">
-        </a>
-        <ul class="nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'agrega' %}">Agregar</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'modificar' %}">Modificar</a>
-            </li>
-        </ul>
-    </div>
-
-    <!-- Mostrar mensajes -->
-    {% if messages %}
-        <div class="alert alert-danger mt-3">
-            {% for message in messages %}
-                <p>{{ message }}</p>
-            {% endfor %}
-        </div>
-    {% endif %}
-
     <!--Formulario-->
     <div class="title-container">
         <h2 id="trabaja">Registrar Mantenimiento</h2>
@@ -74,9 +34,9 @@
                 <label for="mecanico">Mecánico</label>
                 <select class="form-control" name="mecanico" id="mecanico">
                     <option value="">Seleccione un mecánico</option>
-                    <option value="Tulio Triviño">Tulio Triviño</option>
-                    <option value="Wa-tong Loyola">Wa-tong Loyola</option>
-                    <option value="Romás Rojas">Romás Rojas</option>
+                    {% for mecanico in mecanicos %}
+                        <option value="{{ mecanico.nombre }} {{ mecanico.apellido_paterno }}">{{ mecanico.nombre }} {{mecanico.apellido_paterno }}</option>
+                    {% endfor %}
                 </select>
                 <small class="form-text text-danger" id="error_mecanico"></small>
             </div>

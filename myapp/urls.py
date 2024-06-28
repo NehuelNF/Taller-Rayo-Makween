@@ -41,6 +41,9 @@ urlpatterns = [
     path('A-Termostato1', views.A_Termostato1, name='A-Termostato1'),
     path('A-Termostato2', views.A_Termostato2, name='A-Termostato2'),
 
+    # Error
+    path('Rechazado', views.Rechazado, name='Rechazado'),
+
     # Administracion
     path('Menu', views.Menu, name='menu'),
     path('agregar', views.agregar, name='agregar'),

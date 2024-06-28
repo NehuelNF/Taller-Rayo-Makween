@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Administracion </title>
+    <title>Administración</title>
     <link rel="icon" type="image/png" sizes="32x32" href="https://seeklogo.com/images/P/Pixar_Cars_-_Rusteze-logo-CD235902CE-seeklogo.com.png"/>
     <!-- Css -->
     <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom_menu.css' %}">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="{% static 'bootstrap-5.3.3/css/bootstrap.css' %}">
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'bootstrap-5.3.3/js/bootstrap.min.js' %}"></script>
     <style>
         body {
             background: rgb(223, 141, 59);
@@ -32,12 +33,16 @@
         </a>
         <ul class="nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'agrega' %}">Agregar</a>
+                <a class="nav-link" href="{% url 'agregar' %}">Agregar</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'modificar' %}">Modificar</a>
             </li>
         </ul>
+    </div>
+    <div class="content-center">
+        <img src="{% static 'imagenes/mano.png' %}" alt="Admin Image" class="admin-image">
+        <div class="admin-text">Para usar las opciones de administración, utilice la barra de navegación</div>
     </div>
 </body>
 </html>

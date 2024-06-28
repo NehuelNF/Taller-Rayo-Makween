@@ -43,3 +43,24 @@
     color: black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+/* Body */
+
+.content-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+.admin-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.admin-text {
+    margin-top: 20px;
+    font-size: 1.5em;
+    text-align: center;
+}
