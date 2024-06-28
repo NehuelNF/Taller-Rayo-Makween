@@ -36,12 +36,12 @@ def Login(request):
 
         if user is not None:
             login(request, user)
-            if user.is_staff:
-                return redirect('Servicio')  # Redirigir a la página de registrar servicio realizado
-            elif user.is_superuser:
-                return redirect('menu') # Redirigir al menú de administración 
+            if user.is_superuser:
+                return redirect('menu')  # Redirigir a la página de registrar servicio realizado
+            elif user.is_staff:
+                return redirect('Servicio') # Redirigir al menú de administración 
             else:
-                return redirect('paginaPrincipal')  # Redirigir a la página principal para otros usuarios
+                return redirect('paginaPrincipal')  # Redirigir a la página principal para todos los usuarios
         else:
             if not User.objects.filter(username=username).exists():
                 messages.error(request, 'Usuario inexistente')
