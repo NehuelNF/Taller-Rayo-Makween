@@ -36,8 +36,10 @@ def Login(request):
         
         if user is not None:
             login(request, user)
-            if user.is_staff:
-                return redirect('menu')  # Redirigir a la página del menú para el personal
+            if user.is_superuser:
+                return redirect('menu')  # Redirigir a la página de registrar servicio realizado
+            elif user.is_staff:
+                return redirect('Servicio') # Redirigir al menú de administración 
             else:
                 return redirect('paginaPrincipal')  # Redirigir a la página principal para otros usuarios
         else:
@@ -89,7 +91,13 @@ def Servicio(request):
         )
         
         return HttpResponse("Mantenimiento registrado exitosamente")
+<<<<<<< HEAD
     return render(request, 'Administracion/Servicio.html')
+=======
+    else:
+        mecanicos = Mecanico.objects.all()
+        return render(request, 'Servicio.html', {'mecanicos': mecanicos})
+>>>>>>> a4ae792749ff9b77e73b7041cf2e354a2d146186
 
 def lista_mantenimientos(request):
     mantenimientos = Mantenimiento.objects.all()
@@ -254,6 +262,13 @@ def Modificar(request):
     template = loader.get_template('Administracion/Modificar.html')
     return HttpResponse(template.render({}, request))
 
+<<<<<<< HEAD
 def agrega(request):
     template = loader.get_template('Administracion/agrega.html')
     return HttpResponse(template.render({}, request))
+=======
+# Error
+def Rechazado(request):
+    template = loader.get_template('Rechazado.html')
+    return HttpResponse(template.render({}, request))
+>>>>>>> a4ae792749ff9b77e73b7041cf2e354a2d146186
