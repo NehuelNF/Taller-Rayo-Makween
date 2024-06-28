@@ -53,4 +53,6 @@ urlpatterns = [
     path('mecanicos/', views.listarM, name='listarM'),
     path('modificar', views.Modificar, name='modificar'),
     path('agrega', views.agrega, name='agrega'),
+    path('modificarM', views.ModificarM, name='ModificarM'),
+    path('mecanicos/', views.ModificarM, name='ModificarM'),
 ]

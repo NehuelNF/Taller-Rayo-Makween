@@ -254,6 +254,17 @@ def Modificar(request):
     template = loader.get_template('Administracion/Modificar.html')
     return HttpResponse(template.render({}, request))
 
+def ModificarM(request):
+    template = loader.get_template('Administracion/ModificarM.html')
+    return HttpResponse(template.render({}, request))
+
+def ModificarM(request):
+    mecanicos = Mecanico.objects.all()
+    contexto = {
+        'mecanicos': mecanicos
+    }
+    return render(request, 'Administracion/ModificarM.html', contexto)
+
 def agrega(request):
     template = loader.get_template('Administracion/agrega.html')
     return HttpResponse(template.render({}, request))
