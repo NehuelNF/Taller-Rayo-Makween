@@ -277,7 +277,7 @@ def mecanicos_findEdit(request,pk):
             return render(request, 'Administracion/editM.html', context)
         else:
             context={'mensaje':'Error, rut no existe...'}
-            return render(request, 'Administracion/listarM.html', context)
+            return render(request, 'Administracion/listar.html', context)
 
 def mecanicos_del(request,pk):
     context={}
@@ -287,12 +287,12 @@ def mecanicos_del(request,pk):
         mensaje="Bien, datos aliminados..."
         mecanico = Mecanico.objects.all()
         context = {'mecanico':mecanico, 'mensaje':mensaje }
-        return render(request, 'Administracion/listarM.html', context)
+        return render(request, 'Administracion/listar.html', context)
     except:
         mensaje="Error, rut no existe..."
         mecanico = Mecanico.objects.all()
         context = {'mecanico': mecanico, 'mensaje': mensaje}
-        return render(request, 'Administracion/listarM.html', context)
+        return render(request, 'Administracion/listar.html', context)
 
 def mecanicosUpdate(request):
     if request.method == "POST":
@@ -318,4 +318,3 @@ def mecanicosUpdate(request):
         mecanico = Mecanico.objects.all()
         context= {'mecanico':mecanico}
         return render(request, 'Administracion/editM.html', context)
-    
