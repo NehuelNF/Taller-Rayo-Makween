@@ -53,8 +53,12 @@ urlpatterns = [
     path('mecanicos/', views.listarM, name='listarM'),
     path('modificar', views.Modificar, name='modificar'),
     path('agrega', views.agrega, name='agrega'),
+    path('modificarM', views.ModificarM, name='ModificarM'),
     path('mecanicos_del/<str:pk>', views.mecanicos_del, name='mecanicos_del'),
     path('mecanicos_findEdit/<str:pk>', views.mecanicos_findEdit, name='mecanicos_findEdit'),
     path('mecanicosUpdate', views.mecanicosUpdate, name='mecanicosUpdate'),
     path('mantenimientos/', views.listarS, name='listarS'),
+    path('modificarS', views.ModificarS, name='ModificarS'),
+    path('mantenimiento_findEdit/<str:pk>', views.mantenimiento_findEdit, name='mantenimiento_findEdit'),
+    path('serviciosUpdate', views.serviciosUpdate, name='serviciosUpdate'),
 ]

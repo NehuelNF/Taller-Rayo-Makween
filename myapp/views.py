@@ -8,6 +8,7 @@ from django.contrib.auth.hashers import make_password
 from django.contrib.auth import authenticate, login
 from .decorators import staff_required, superuser_required
 from django.contrib.auth.decorators import login_required
+from datetime import datetime
 
 
 # Create your views here.
@@ -233,9 +234,8 @@ def agregar(request):
 @login_required
 @superuser_required
 def listar(request):
-    mecanico=Mecanico.objects.all()
-    context={"mecanico":Mecanico}
-    return render(request, 'Administracion/listar.html', context)
+    template = loader.get_template('Administracion/listar.html')
+    return HttpResponse(template.render({}, request))
 
 @login_required
 @superuser_required
@@ -263,12 +263,33 @@ def Modificar(request):
 
 @login_required
 @superuser_required
-def Modificar(request):
+def ModificarM(request):
+    template = loader.get_template('Administracion/ModificarM.html')
+    return HttpResponse(template.render({}, request))
+
+@login_required
+@superuser_required
+def ModificarM(request):
     mecanicos = Mecanico.objects.all()
     contexto = {
         'mecanicos': mecanicos
     }
-    return render(request, 'Administracion/Modificar.html', contexto)
+    return render(request, 'Administracion/ModificarM.html', contexto)
+
+@login_required
+@superuser_required
+def ModificarS(request):
+    template = loader.get_template('Administracion/ModificarS.html')
+    return HttpResponse(template.render({}, request))
+
+@login_required
+@superuser_required
+def ModificarS(request):
+    mantenimientos = Mantenimiento.objects.all()
+    contexto = {
+        'mantenimientos': mantenimientos
+    }
+    return render(request, 'Administracion/ModificarS.html', contexto)
 
 @login_required
 @superuser_required
@@ -335,3 +356,45 @@ def mecanicosUpdate(request):
         mecanico = Mecanico.objects.all()
         context= {'mecanico':mecanico}
         return render(request, 'Administracion/editM.html', context)
+
+
+@login_required
+@superuser_required
+def mantenimiento_findEdit(request,pk):
+    if pk != "":
+        mantenimiento=Mantenimiento.objects.get(id=pk)
+        context={'mantenimiento':mantenimiento}
+        if mantenimiento:
+            return render(request, 'Administracion/editS.html', context)
+        else:
+            context={'mensaje':'Error, rut no existe...'}
+            return render(request, 'Administracion/listar.html', context)
+
+
+@login_required
+@superuser_required
+def serviciosUpdate(request):
+    if request.method == "POST":
+        id = request.POST["id"]
+        mecanico = request.POST["mecanico"]
+        zona = request.POST["zona"]
+        pieza = request.POST["pieza"]
+        comentarios = request.POST["comentarios"]
+        mantenimiento = Mantenimiento.objects.get(id=id)
+        mantenimiento.mecanico = mecanico
+        mantenimiento.zona = zona
+        mantenimiento.pieza = pieza
+        mantenimiento.comentarios = comentarios
+        mantenimiento.fecha_hora = datetime.now()
+        mantenimiento.save()
+        context = {
+            'mensaje': "Ok, datos actualizados...",
+            'mantenimiento': mantenimiento,
+        }
+        return render(request, 'Administracion/editS.html', context)
+    else:
+        mantenimiento = Mantenimiento.objects.all()
+        context = {
+            'mantenimiento': mantenimiento,
+        }
+        return render(request, 'Administracion/editS.html', context)

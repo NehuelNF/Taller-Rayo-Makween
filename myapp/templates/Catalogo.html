@@ -19,7 +19,6 @@
 
     <!-- Custom JS -->
     <script src="{% static 'js/PaginaPrincipal.js' %}" defer></script>
-    <script src="{% static 'js/HeadAndFoot.js' %}" defer></script>
 </head>
 <body>
     <!-- Parte superior -->
@@ -432,7 +431,7 @@
         </ul>
       </nav>
     <!-- footer-->
-    <footer class="fo-pagina"></footer>
+    {% include "Footer.html"%}
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>

@@ -40,43 +40,10 @@
             </li>
         </ul>
     </div>
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="mb-4">Modificar Mecanicos</h1>
-                <a href="{% url 'agregar' %}" class="btn btn-primary mb-3">Agregar Mecanico</a>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Rut</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Apellido P.</th>
-                            <th scope="col">Apellido M.</th>
-                            <th scope="col">Eliminar</th>
-                            <th scope="col">Modificar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for mecanico in mecanicos %}
-                            <tr>
-                                <td>{{ mecanico.rut }}</td>
-                                <td>{{ mecanico.nombre }}</td>
-                                <td>{{ mecanico.apellido_paterno }}</td>
-                                <td>{{ mecanico.apellido_materno }}</td>
-                                <td>
-                                    <!-- Agrega aquí el enlace o botón para eliminar -->
-                                    <a href="{% url 'mecanicos_del' pk=mecanico.rut %}">Eliminar</a>
-                                </td>
-                                <td>
-                                    <!-- Agrega aquí el enlace o botón para modificar -->
-                                    <a href="{% url 'mecanicos_findEdit' pk=mecanico.rut %}">Modificar</a>
-                                </td>
-                            </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+    <h1 id="list">Modificar mecanicos y servicios realizados</h1>
+    <div class="doble">
+        <a href="{% url 'ModificarM' %}"><img class="im1" src="{% static 'imagenes/mecanicos.png' %}" alt="Listado" width="440px" height="400px"></a>
+        <a href="{% url 'ModificarS' %}"><img class="im2" src="{% static 'imagenes/servicios.png' %}" alt="Listado" width="440px" height="400px"></a>
+      </div>
 </body>
 </html>

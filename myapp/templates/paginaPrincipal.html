@@ -70,7 +70,7 @@
     <!-- Card -->
     <div class="container-carda">
         <div class="carda">
-            <a href="{% url 'Registrar' %}">
+            <a href="{% url 'A-Bateria1' %}">
                 <img src="{% static 'imagenes/batería1.jpg' %}">
                 <div class="cardl">
                     <h3> Batería </h3>
@@ -86,7 +86,7 @@
             </a>
         </div>
         <div class="carda">
-            <a href="{% url 'Login' %}">
+            <a href="{% url 'A-Neumatico3' %}">
                 <img src="{% static 'imagenes/nuematico 333.jpg' %}">
                 <div class="cardl">
                     <h3>  Neumatico </h3>
@@ -101,7 +101,7 @@
             </a>
         </div>
         <div class="carda">
-            <a href="catalogo/A-Correa.html">
+            <a href="{% url 'A-Correa' %}">
                 <img src="{% static 'imagenes/correa.jpg' %}">
                 <div class="cardl">
                     <h3> Correa </h3>
@@ -119,7 +119,7 @@
             </a>
         </div>
         <div class="carda">
-            <a href="catalogo/A-Neumatico1.html">
+            <a href="{% url 'A-Neumatico1' %}">
                 <img src="{% static 'imagenes/neumatico 111.jpg' %}">
                 <div class="cardl">
                     <h3> Neumaticos </h3>
@@ -134,7 +134,7 @@
             </a>
         </div>
         <div class="carda">
-            <a href="catalogo/A-Bobina1.html">
+            <a href="{% url 'A-Bobina1' %}">
                 <img src="{% static 'imagenes/bobina1.jpg' %}">
                 <div class="cardl">
                     <h3> Bobina </h3>
@@ -389,8 +389,7 @@
     <!-- Javascript API-->
     <script src="{% static 'js/PaginaPrincipal.js' %}"></script>
     <!-- footer-->
-    <footer class="fo-pagina" >
-    </footer>
+    {% include "Footer.html"%}
     <!--Header and Footer JS-->
     <script src="{% static 'js/HeadAndFoot.js' %}"></script>
     <!--bootstrap-->

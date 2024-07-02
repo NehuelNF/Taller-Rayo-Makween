@@ -1,6 +1,7 @@
 from django.db import models
 
 class Mantenimiento(models.Model):
+    id = models.AutoField(primary_key=True)
     mecanico = models.CharField(max_length=255)
     zona = models.CharField(max_length=255)
     pieza = models.CharField(max_length=255)
@@ -9,7 +10,6 @@ class Mantenimiento(models.Model):
 
     def __str__(self):
         return f"{self.mecanico} - {self.zona}"
-    
 class User(models.Model):
     nombre = models.CharField(max_length=100)
     descripcion = models.TextField()
